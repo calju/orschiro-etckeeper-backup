@@ -1,0 +1,16 @@
+[connection]
+id=Wildfire Network
+uuid=708bd67d-ead0-431c-b3c0-d0be050b67d1
+type=bluetooth
+autoconnect=false
+
+[bluetooth]
+bdaddr=90:21:55:88:99:AD
+type=panu
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto
+may-fail=false

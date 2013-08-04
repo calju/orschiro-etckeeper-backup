@@ -1,0 +1,15 @@
+[connection]
+id=BLB
+uuid=2c2ab8d2-d415-41fd-8a65-c58049eece70
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=BLB
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

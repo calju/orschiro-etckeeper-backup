@@ -1,0 +1,21 @@
+[connection]
+id=Auto HTC Spot
+uuid=330b4f18-9072-4d6a-8b27-4bc3d2cd855f
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=HTC Spot
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=1990robert
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

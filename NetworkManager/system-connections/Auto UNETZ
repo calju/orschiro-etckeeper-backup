@@ -1,0 +1,21 @@
+[connection]
+id=Auto UNETZ
+uuid=848fd9ef-af10-4345-80c0-94fda4c5b2f5
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=UNETZ
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=internet1234
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

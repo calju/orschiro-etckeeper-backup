@@ -1,0 +1,21 @@
+[connection]
+id=Auto FRITZ!Box Fon WLAN 7112
+uuid=905c7548-79bb-4a97-9fb4-5ce1333f7ce5
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=FRITZ!Box Fon WLAN 7112
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=2225166917688057
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case $1 in
+    resume)
+        /home/orschiro/.startup
+        ;;
+    thaw)
+	/home/orschiro/.startup
+	;;
+    *)
+	/home/orschiro/.startup
+	;;
+esac

@@ -1,0 +1,942 @@
+! $Id: XPaint_fr.ad.in,v 1.15 2005/03/20 20:15:34 demailly Exp $
+
+!
+! These 2 files need to be appropriately set and translated in case
+! XPaint is translated to a new language. Translate also the
+! label/title section
+!
+
+xpaint*helpFile: help/Help_fr
+xpaint*msgFile:  messages/Messages_fr
+
+! Menu font (throughout)
+xpaint*menufont: Liberation Sans-9
+
+! Xpaint share directory
+xpaint*shareDir: /usr/share/xpaint
+
+!  This fixes Xpaint's startup features
+!xpaint*horizontal: True
+!xpaint*popped: True
+!xpaint*nomenubar: True
+xpaint*fullpopup: False
+
+! Increase this if you have a lot of memory
+Canvas*paint.undoSize:		2
+
+!   This maybe needed for Xaw95 widgets
+!*vertical*borderWidth:          0
+!*horizontal*borderWidth:        0
+
+! Highlight thichness of buttons  (2 is Xaw3d default)
+xpaint*highlightThickness:      1
+Canvas*highlightThickness:      1
+xpaint*Viewport.borderColor:       grey91
+Canvas*Viewport.borderColor:       grey91
+
+! Non intrusive shadowWidth
+*vertical*shadowWidth:          1
+*horizontal*shadowWidth:        1
+*valueBar*shadowWidth:          1
+*varianceBar*shadowWidth:       1
+*pointBar*shadowWidth:          1
+*valueBar*shadowWidth:          1
+*Text*shadowWidth:	        1
+*SimpleMenu*SmeBSB*shadowWidth: 0
+*SimpleMenu*foreground:   black
+*Text*foreground:	black
+
+xpaint*fontSelect*List.translations:	<Btn1Down>: Set() Notify()
+
+! This describes the new sophisticated behaviour of menu popups
+! Change at your own risk !
+
+xpaint*MenuButton.SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+	<Motion>: highlight-child()\n\
+        <Btn1Up>: notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: notify() unhighlight()\n\
+        <Btn1Down>: highlight-child()\n\
+        <Btn2Down>: highlight-child()\n\
+        <Btn3Down>: highlight-child()
+
+xpaint*Toggle.SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+	<Enter>: highlight-child()\n\
+	<Leave>: unhighlight()\n\
+        <Motion>: highlight-child()\n\
+        <Btn1Up>: unhighlight() popdown-child()\n\
+        <Btn2Up>: highlight-child()\n\
+        <Btn3Up>: highlight-child()\n\
+        <Btn1Down>: highlight-child() notify()\n\
+        <Btn2Down>: unhighlight() popdown-all()\n\
+        <Btn3Down>: highlight-child() notify()
+
+xpaint*paintBox*paint.SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight-child() popdown-child()\n\
+        <Btn1Up>: notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-child()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child()
+
+xpaint*paintBox*paint.SimpleMenu*SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight-child() popdown-child()\n\
+        <Btn1Up>: notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-child()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child()
+
+Canvas*menu*SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight-child() popup-menu-pullright()\n\
+        <Btn1Up>: check-notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child() popup-menu-pullright()
+
+Canvas*pane*SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight-child()\n\
+        <Btn1Up>: check-notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child() popup-menu-pullright()
+
+Canvas*print*SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight-child()\n\
+        <Btn1Up>: check-notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: check-notify() highlight-child()\n\
+        <Btn2Down>: highlight-child()\n\
+        <Btn3Down>: check-notify() highlight-child()\n\
+        <BtnMotion>: highlight-child()
+
+Canvas*paint*SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight() popdown-child()\n\
+        <Btn1Up>: check-notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child() popup-menu-pullright()
+
+Canvas*paint*SimpleMenu.SimpleMenu.translations: #override \
+        <Key>Escape: escape()\n\
+        <Enter>: highlight-child()\n\
+        <Leave>: unhighlight()\n\
+        <Motion>: highlight() popdown-child()\n\
+        <Btn1Up>: check-notify() unhighlight() popdown-child()\n\
+        <Btn2Up>: unhighlight() popdown-all()\n\
+        <Btn3Up>: unhighlight()\n\
+        <Btn1Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <Btn2Down>: highlight-child() popup-menu-pullright()\n\
+        <Btn3Down>: check-notify() highlight-child() popup-menu-pullright()\n\
+        <BtnMotion>: highlight-child() popup-menu-pullright()
+
+!
+!  paint.zoom must equal the value on button3
+!  No zoom value must exceed MAXZOOM
+!
+Canvas*fatbits*paint.zoom:		6
+Canvas*fatbits*zoomButton1.label:	2:1
+Canvas*fatbits*zoomButton2.label:	4:1
+Canvas*fatbits*zoomButton3.label:	6:1
+Canvas*fatbits*zoomButton4.label:	8:1
+Canvas*fatbits*zoomButton5.label:	16:1
+
+!
+!  Black and white resources
+!
+
+!Canvas*background:	white
+Canvas*textSink*foreground:	black
+
+!
+!  Test Color resources
+!
+
+Canvas*background:		#dcdad5
+Canvas*paint*background:	white
+Canvas*paint*popup-menu*background: #dcdad5
+
+xpaint*helpDialog*topic*background:	thistle1
+xpaint*background:		#dcdad5
+xpaint*Box.background:		grey91
+xpaint*textSink*foreground:	black
+xpaint*foreground:		black
+Canvas*Box.background:		grey91
+Canvas*pane*menu.zoom.background:	pink1
+Canvas*pane*menu.alpha.background:	pink1
+Canvas*pane*resize.background:	pink1
+Canvas*foreground:		black
+
+xpaint*Toggle.background:	#dcdad5
+Canvas*Toggle.background:	#dcdad5
+
+xpaint*Text.background:		white
+xpaint*textSink.background:	white
+xpaint*HTML.background:		white
+Canvas*Text.background:		white
+Canvas*textSink.background:	white
+
+xpaint*filebrowser*Label.background:	grey91
+xpaint*filebrowser*Toggle.background:	#dcdad5
+xpaint*filebrowser*name*background:	white
+xpaint*filebrowser*title.background:	#dcdad5
+
+Canvas*filebrowser*Label.background:	grey91
+Canvas*filebrowser*Toggle.background:	#dcdad5
+Canvas*filebrowser*name*background:	white
+Canvas*filebrowser*title.background:	#dcdad5
+
+xpaint*Command.background:		#dcdad5
+Canvas*Command.background:		#dcdad5
+
+Canvas.pane.background:		black
+
+! Nice buttons with Xaw3d
+*beNiceToColormap: false
+xpaint*MenuButton.height:		22
+Canvas*MenuButton.height:		22
+xpaint*Command.height:		22
+Canvas*Command.height:		22
+
+
+!
+! Start of the label/title section
+! This is the place where localization should occur in the main menus
+!
+
+*ok.label:			Ok
+*stopit.label:			Annuler
+*cancel.label:			Terminer
+*close.label:			Fermer
+*apply.label:			Appliquer
+*hidden.label:			Fichiers cachés
+*ongoing.label:                 Continu
+*alert.title:			Attention
+
+Canvas*fatbits.title:			XPaint / Editeur de Détails
+Canvas*fatbits.iconName:		XPaint Détails
+Canvas*fatbits*done.label:		Terminer
+Canvas*fatbits*refresh.label:		Rafraîchir
+
+xpaint*xleft.label:	<
+xpaint*xright.label:	>
+xpaint*xxleft.label:	«
+xpaint*xxright.label:	»
+
+!
+!  Font Selector
+!
+
+xpaint*fontSelect.title:		XPaint / Sélection de Polices
+xpaint*fontSelect.iconName:		XPaint Polices
+xpaint*fontSelect*vport.height:		280
+xpaint*fontSelect*text.width:		620
+xpaint*fontSelect*text.height:		70
+xpaint*fontSelect*edittoggle.label:	Editer
+xpaint*fontSelect*apply.label:		Appliquer
+xpaint*fontSelect*done.label:		Fermer
+xpaint*fontSelect*familyLabel.label:	Famille de Police
+xpaint*fontSelect*weightLabel.label:	Style
+xpaint*fontSelect*pointSelectLabel.label:	Nombre de Points
+xpaint*fontSelect*rotationLabel.label:	Rotation
+xpaint*fontSelect*inclinationLabel.label:	Inclinaison
+xpaint*fontSelect*dilationLabel.label:	Dilatation
+xpaint*fontSelect*linespacingLabel.label:	Interligne
+xpaint*fontSelect*text_file.label:	Fichier
+xpaint*fontSelect*text_fileMenu*load.label:	Charger fichier
+xpaint*fontSelect*text_fileMenu*save.label:	Sauvegarder
+xpaint*fontSelect*text_fileMenu*saveas.label:	Sauvegarder sous...
+xpaint*fontSelect*text_fileMenu*editor.label:	Editeur externe...
+xpaint*fontSelect*text_sample.label:	Texte
+xpaint*fontSelect*text_sampleMenu*default.label:	Par défaut
+xpaint*fontSelect*text_sampleMenu*erase.label:	Effacer
+xpaint*fontSelect*text_sampleMenu*record.label:	Enregistrer
+
+
+!
+!  The Pattern Editor
+!
+
+xpaint*pattern.title:			XPaint / Sélecteur de Couleurs et Motifs
+xpaint*pattern*paint.zoom:		6
+xpaint*pattern*palette.label:		Palette
+xpaint*pattern*palette*saveconfig.label:	Sauvegarder la Palette...
+xpaint*pattern*palette*loadconfig.label:	Charger une Palette...
+xpaint*pattern*palette*markselected.label:	Marquer Motif Sélectionné
+xpaint*pattern*palette*unmark.label:		Enlever la Marque
+xpaint*pattern*palette*loadmarked.label:	Charger Motif Marqué
+xpaint*pattern*palette*delete.label:	Supprimer Motif Marqué
+xpaint*pattern*canvas.label:		Canevas
+xpaint*pattern*canvas*read.label:	Charger Image
+xpaint*pattern*canvas*save.label:	Sauvegarder sous...
+xpaint*pattern*canvas*close.label:	Fermer
+xpaint*pattern*edit.label:		Editer
+xpaint*pattern*edit*undo.label:		Défaire
+xpaint*pattern*edit*cut.label:		Couper
+xpaint*pattern*edit*copy.label:		Copier
+xpaint*pattern*edit*paste.label:	Coller
+xpaint*pattern*edit*clear.label:	Effacer
+xpaint*pattern*edit*dup.label:		Dupliquer
+xpaint*pattern*edit*all.label:		Tout Sélectionner
+xpaint*pattern*popup-menu*select.label:	Sélectionner...
+xpaint*pattern*line.label:		Trait
+xpaint*pattern*line*linestyle.label:	Style de ligne...
+xpaint*pattern*lookup.label:		Saisir
+xpaint*pattern*grab.label:		Capturer
+xpaint*pattern*select.label:		Enregistrer
+xpaint*pattern*asbg.label:		Couleur de fond
+xpaint*pattern*asbrush.label:		comme Pinceau
+xpaint*pattern*size.label:		Taille
+xpaint*pattern*size*other.label:	Sélectionner...
+xpaint*pattern*image.label:		Image
+xpaint*pattern*image*grid.label:	Grille Visible
+xpaint*pattern*image*grid_param.label:	Paramètres Grille...
+xpaint*pattern*image*zoom.label:	Facteur de Zoom
+xpaint*pattern*image*background.label:	Couleur de Fond...
+xpaint*pattern*help.label:		Aide
+xpaint*pattern*help*help.label:		Aide...
+xpaint*pattern*viewport*vertical.thickness: 14
+xpaint*patternRackForm*popup-menu.label:	Motif
+xpaint*patternRackForm*popup-menu.mark.label:	Marquer
+xpaint*patternRackForm*popup-menu.unmark.label:	Enlever Marque
+xpaint*patternRackForm*popup-menu.loadpattern.label:	Charger
+xpaint*patternRackForm*popup-menu.edit.label:	Editer
+xpaint*patternRackForm*popup-menu.remove.label:	Supprimer 
+xpaint*patternRackForm*popup-menu.help.label:	Aide
+xpaint*patternRackForm.vport.height:		100
+xpaint*patternRackForm*viewport2*vertical.thickness:		14
+xpaint*patternRackForm*viewport2.width:		604
+xpaint*patternRackForm*viewport2.height:	194
+
+!
+!  The top level operation/toolbox menu
+!
+!xpaint*toolbox*vport.width:			493
+!xpaint*toolbox*vport.height:			157
+xpaint*toolbox*vport*vertDistance:		2
+xpaint*toolbox*box*vertDistance:		0
+xpaint*toolbox*canvas.label:			Canevas
+xpaint*toolbox*canvas*new.label:			Nouveau Canevas
+xpaint*toolbox*canvas*new-size.label:		Canevas de taille spécifiée...
+xpaint*toolbox*canvas*open.label:			Sélecteur de Fichiers...
+xpaint*toolbox*canvas*loaded.label:			Fichiers déjà chargés...
+xpaint*toolbox*canvas*magnifier.label:			Loupe...
+xpaint*toolbox*canvas*screenshot.label:		Capture d'Ecran...
+xpaint*toolbox*canvas*about.label:		A Propos...
+xpaint*toolbox*canvas*quit.label:			Quitter XPaint
+xpaint*toolbox*other.label:			Pinceau
+xpaint*toolbox*other*brushSelect.label:		Sélectionner Pinceau
+xpaint*toolbox*other*sprayEdit.label:		Mode Pulvérisateur
+xpaint*toolbox*help.label:			Aide
+xpaint*toolbox*help*intro.label:		Introduction
+xpaint*toolbox*help*tools.label:		Boîte à Outils
+xpaint*toolbox*help*canvas.label:		Canevas
+xpaint*toolbox*help*about.label:		A Propos
+xpaint*toolbox*help*copyright.label:		Licence
+xpaint*toolbox*help*tooltips.label:		Bulles d'Aide
+
+!
+! Operation popup menus
+!
+
+xpaint*toolbox*pencil.popup-menu.label:		Crayon
+xpaint*toolbox*dotPencil.popup-menu.label:	Crayon diffus
+xpaint*toolbox*dynpencil.popup-menu.label:	Crayon dynamique
+xpaint*toolbox*dynpencil.popup-menu.autofinish.label:	Auto-Finition
+xpaint*toolbox*dynpencil.popup-menu.select.label:	Paramètres...
+xpaint*toolbox*brush.popup-menu.label:		Pinceau
+xpaint*toolbox*brush.popup-menu.opaque.label:	Opaque
+xpaint*toolbox*brush.popup-menu.transparent.label:	Transparent
+xpaint*toolbox*brush.popup-menu.stain.label:	Surimpression
+xpaint*toolbox*brush.popup-menu.select.label:	Sélectionner Pinceau...
+xpaint*toolbox*brush.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*erase.popup-menu.label:		Gomme
+xpaint*toolbox*erase.popup-menu.original.label:	Normale
+xpaint*toolbox*erase.popup-menu.select.label:	Sélectionner Embout...
+xpaint*toolbox*spray.popup-menu.label:		Pulvérisateur
+xpaint*toolbox*spray.popup-menu.gauss.label:	Gauss
+xpaint*toolbox*spray.popup-menu.select.label:	Paramètres...
+xpaint*toolbox*smear.popup-menu.label:		Diffuseur
+xpaint*toolbox*smear.popup-menu.select.label:	Sélectionner Embout...
+xpaint*toolbox*line.popup-menu.label:		Segment
+xpaint*toolbox*arc.popup-menu.label:		Arc
+xpaint*toolbox*arc.popup-menu*connect.label:	Arc de cercle
+xpaint*toolbox*arc.popup-menu*quadrant.label:	Quart d'ellipse 
+xpaint*toolbox*arc.popup-menu*centered.label:	Arc d'ellipse centré
+xpaint*toolbox*arc.popup-menu*boxed.label:	Arc d'ellipse encadré
+xpaint*toolbox*arrow.popup-menu.label:		Flèche
+xpaint*toolbox*arrow.popup-menu*head_only.label:	Tête seule
+xpaint*toolbox*arrow.popup-menu*param.label:	Paramètres...
+xpaint*toolbox*popup-menu*center.label:		Centre
+xpaint*toolbox*line.popup-menu*multi.label:	Gerbe
+xpaint*toolbox*line.popup-menu*vector.label:	Vecteur
+xpaint*toolbox*line.popup-menu*param.label:	Paramètres flèche...
+xpaint*toolbox*fill.popup-menu.label:		Remplissage
+xpaint*toolbox*gradientFill.popup-menu.label:		Remplissage avec Dégradé
+xpaint*toolbox*gradientFill.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*fractalFill.popup-menu.label:		Remplissage Fractal
+xpaint*toolbox*fractalFill.popup-menu.param.label:	Sélectionner Densité...
+xpaint*toolbox*fractalFill.popup-menu.plasma.label:	Plasma
+xpaint*toolbox*fractalFill.popup-menu.clouds.label:	Nuages
+xpaint*toolbox*fractalFill.popup-menu.landscape.label:	Terre/Mer
+! Next 3 lines are common for all fill operators
+xpaint*toolbox*popup-menu.fill.label:		Remplissage de Zone
+xpaint*toolbox*popup-menu.fill_color.label:	Remplissage de Couleur
+xpaint*toolbox*popup-menu.fill_range.label:	Remplissage Intervalle Chromatique
+xpaint*toolbox*gradientFill.popup-menu.radial.label:		Radial
+xpaint*toolbox*gradientFill.popup-menu.linear.label:		Linéaire
+xpaint*toolbox*gradientFill.popup-menu.conical.label:	Conique
+xpaint*toolbox*gradientFill.popup-menu.square.label:		Carré
+xpaint*toolbox*popup-menu.rectangle.label:	Rectangle
+xpaint*toolbox*popup-menu.ellipse.label:	Ellipse
+xpaint*toolbox*text.popup-menu.label:		Texte
+xpaint*toolbox*text.popup-menu.select.label:	Sélectionner Police...
+xpaint*toolbox*popup-menu.arbitrary.label:	Polygone quelconque
+xpaint*toolbox*popup-menu.regular.label:	Polygone régulier
+xpaint*toolbox*popup-menu.starlike.label:	Polygone étoilé
+xpaint*toolbox*selectBox.popup-menu.label:	Région Rectangulaire
+xpaint*toolbox*selectBox.popup-menu.round.label:	Coins arrondis
+xpaint*toolbox*selectBox.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*selectEllipse.popup-menu.label:	Région Elliptique
+xpaint*toolbox*selectPolygon.popup-menu.label:	Région Polygonale
+xpaint*toolbox*selectPolygon.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*selectFreehand.popup-menu.label:	Région de Forme libre
+xpaint*toolbox*selectSpline.popup-menu.label:	Région à Contour Spline
+xpaint*toolbox*selectSpline.popup-menu.open.label:	Ouverte
+xpaint*toolbox*selectSpline.popup-menu.closed.label:	Fermée
+xpaint*toolbox*selectSpline.popup-menu.closed_up.label:	Achevée
+! Next 3 lines are common for all select operators
+xpaint*toolbox*popup-menu.shape.label:		Toutes Couleurs
+xpaint*toolbox*popup-menu.not_color.label:	Omettre Intervalle de Couleurs
+xpaint*toolbox*popup-menu.only_color.label:	Capturer Intervalle de Couleurs
+! Next line is common for all fill and select operators 
+xpaint*toolbox*popup-menu.select.label:		Sélection Intervalle...
+xpaint*toolbox*box.popup-menu.label:		Rectangle
+xpaint*toolbox*box.popup-menu.round.label:	Coins arrondis
+xpaint*toolbox*box.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*filledBox.popup-menu.label:		Rectangle Rempli
+xpaint*toolbox*filledBox.popup-menu.round.label:	Coins arrondis
+xpaint*toolbox*filledBox.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*ellipse.popup-menu.label:		Ellipse
+xpaint*toolbox*filledEllipse.popup-menu.label:		Ellipse Rempli
+xpaint*toolbox*brokenline.popup-menu.label:		Ligne Polygonale
+xpaint*toolbox*spline.popup-menu.label:		Courbe Spline
+xpaint*toolbox*spline.popup-menu.open.label:	Ouverte
+xpaint*toolbox*spline.popup-menu.closed.label:	Fermée
+xpaint*toolbox*spline.popup-menu.closed_up.label:	Achevée
+xpaint*toolbox*filledSpline.popup-menu.label:		Courbe Spline Remplie
+xpaint*toolbox*filledSpline.popup-menu.open.label:	Ouverte
+xpaint*toolbox*filledSpline.popup-menu.closed.label:	Fermée
+xpaint*toolbox*filledSpline.popup-menu.closed_up.label:	Achevée
+xpaint*toolbox*polygon.popup-menu.label:	Polygone
+xpaint*toolbox*polygon.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*filledPolygon.popup-menu.label:	Polygone Rempli
+xpaint*toolbox*filledPolygon.popup-menu.param.label:	Paramètres...
+xpaint*toolbox*freehand.popup-menu.label:	Forme Libre
+xpaint*toolbox*freehand.popup-menu.open.label:	Ouverte
+xpaint*toolbox*freehand.popup-menu.closed.label:	Fermée
+xpaint*toolbox*filledFreehand.popup-menu.label:	Forme Libre Remplie
+
+xpaint*script_files.label:		Fichier
+xpaint*script_files*load.label:		Charger
+xpaint*script_files*save.label:		Sauvegarder
+xpaint*script_files*saveas.label:	Sauvegarder sous...
+xpaint*script_files*editor.label:	Editeur externe...
+xpaint*script_files*close.label:	Fermer
+xpaint*script_predef.label:		Exemples
+xpaint*script_predef*filters.label:	Filtres
+xpaint*script_predef*images.label:	Images
+xpaint*script_predef*3d_curves.label:	Courbes 3D
+xpaint*script_predef*3d_surfaces.label:	Surfaces 3D
+xpaint*script_predef*layers.label:	Calques
+xpaint*script_predef*procedures.label:	Procédures
+xpaint*script_predef*batch.label:	Batch
+xpaint*script_predef*help.label:	Aide
+xpaint*compile.label:			Compiler
+
+!xpaint*menuLabel.font:		*-times-bold-r-normal--17-*
+!Canvas*menuLabel.font:		*-times-bold-r-normal--17-*
+
+
+!
+!  Canvas area menu pulldowns
+!
+Canvas*menu*file.label:			Fichier
+Canvas*menu*file*open.label:		Ouvrir Image...
+Canvas*menu*file*save.label:		Sauvegarder
+Canvas*menu*file*saveas.label:		Sauvegarder sous...
+Canvas*menu*file*saveregion.label:	Sauvegarder Région...
+Canvas*menu*file*load-mem.label:	Mettre en Mémoire...
+Canvas*menu*file*saveconfig.label:	Sauvegarder Palette...
+Canvas*menu*file*loadconfig.label:	Charger Palette...
+Canvas*menu*file*revert.label:		Recharger l'image...
+Canvas*menu*file*loaded.label:		Fichiers chargés...
+Canvas*menu*file*print.label:		Imprimer...
+Canvas*menu*file*extern.label:		Visualiseur Externe...
+Canvas*menu*file*close.label:		Fermer
+
+Canvas.print*title:	Utilitaire d'impression
+Canvas.print*form*menu*format.label:		Format
+Canvas.print*form*portraitlabel.label:	Portrait
+Canvas.print*form*portraittoggle.label:	X
+Canvas.print*form*landscapelabel.label:	Paysage
+Canvas.print*form*landscapelabel.horizDistance:	149
+Canvas.print*form*landscapetoggle.label:	X
+Canvas.print*form*graylabel.label:	Gris
+Canvas.print*form*graytoggle.label:	X
+Canvas.print*form*compresslabel.label:	Compresser
+Canvas.print*form*compresslabel.horizDistance:	35
+Canvas.print*form*compresstoggle.label:	X
+Canvas.print*form*pdflabel.label:	PDF
+Canvas.print*form*pdflabel.horizDistance:	52
+Canvas.print*form*pdftoggle.label:	X
+Canvas.print*form*wcenter.label:	0
+Canvas.print*form*wplus.label:	>
+Canvas.print*form*wminus.label:	<
+Canvas.print*form*wpplus.label:	»
+Canvas.print*form*wmminus.label:	«
+Canvas.print*form*hcenter.label:	0
+Canvas.print*form*hplus.label:	>
+Canvas.print*form*hminus.label:	<
+Canvas.print*form*hpplus.label:	»
+Canvas.print*form*hmminus.label:	«
+Canvas.print*form*equal.label:	X
+Canvas.print*form*synchro.horizDistance:	60
+
+Canvas.print*form*sizelabel.label:		Taille du dessin
+Canvas.print*form*positionlabel.label:	Position du dessin
+Canvas.print*form*samplinglabel.label:	Finesse Subdivision
+Canvas.print*form*printlabel.label:		Action Impression
+Canvas.print*form*filelabel.label:		Fichier à écrire
+Canvas.print*form*psviewlabel.label:	Visualiseur PS
+Canvas.print*form*resultlabel*label:	Résultat
+
+Canvas.print*form*formattype*string:		A4
+Canvas.print*form*formattype*horizDistance:	10
+Canvas.print*form*sizevalue*string:		100%
+Canvas.print*form*sizevalue*horizDistance:		168
+Canvas.print*form*positionvalue*horizDistance:	168
+Canvas.print*form*samplingvalue*string:	1 x 1
+Canvas.print*form*samplingvalue*horizDistance:	168
+Canvas.print*form*printcmd*string:	lpr
+Canvas.print*form*printcmd*horizDistance:	168
+Canvas.print*form*printtoggle.label:	X
+Canvas.print*form*filetoggle.label:	X
+Canvas.print*form*filename*horizDistance:	168
+Canvas.print*form*psviewcmd*horizDistance:	168
+Canvas.print*form*printresult.width:	250
+Canvas.print*form*printresult*foreground:	Red
+Canvas.print*form*print*horizDistance:	40
+
+
+Canvas.print*form*print.label:	Imprimer
+Canvas.print*form*preview.label:	Visionner
+Canvas.print*form*cancel.label:	Fermer
+
+Canvas.print*form*psviewcmd*string:	gv
+Canvas.extern*form*extviewcmd*string:	display
+
+Canvas.extern*title:	Visualiseur externe
+Canvas.extern*form*format.label:		Format d'échange
+Canvas.extern*form*formatlabel*label:		PPM
+Canvas.extern*form*extviewlabel*label:	Commande
+Canvas.extern*form*view*label:	Visualiser
+Canvas.extern*form*cancel*label:	Fermer
+
+Canvas*menu*edit.label:		Editer
+Canvas*menu*edit*undo.label:		Défaire
+Canvas*menu*edit*redo.label:		Refaire
+Canvas*menu*edit*undosize.label:	Niveau Mémoire...
+Canvas*menu*edit*refresh.label:		Rafraîchir
+Canvas*menu*edit*cut.label:		Découper
+Canvas*menu*edit*copy.label:		Copier
+Canvas*menu*edit*paste.label:		Coller
+Canvas*menu*edit*clear.label:		Effacer
+Canvas*menu*edit*all.label:		Sélectionner Tout
+Canvas*menu*edit*unselect.label:	Désélectionner
+Canvas*menu*edit*dup.label:		Dupliquer
+Canvas*menu*edit*erase.label:		Effacer en Totalité
+Canvas*menu*edit*clone_canvas.label:    Cloner le Canevas
+Canvas*menu*edit*clonezoom_canvas.label:   Cloner avec Zoom
+Canvas*menu*edit*screenshot.label:	Capturer...
+
+Canvas*menu*line.label:			Trait
+Canvas*menu*line*linestyle.label:	Style de Ligne...
+Canvas*menu*text.label:			Texte
+Canvas*menu*text*select.label:		Navigateur de Polices...
+Canvas*menu*text*write.label:		Ecrire Texte
+
+Canvas*menu*region.label:		Région
+Canvas*menu*region*flipX.label:		Symétrie axiale X
+Canvas*menu*region*flipY.label:		Symétrie axiale Y
+Canvas*menu*region*rotateTo.label:	Rotation d'angle
+Canvas*menu*rotateTo-right.label:	Angle
+Canvas*menu*rotateTo-right*rotate1.label:	+90
+Canvas*menu*rotateTo-right*rotate2.label:	+45
+Canvas*menu*rotateTo-right*rotate3.label:	-45
+Canvas*menu*rotateTo-right*rotate4.label:	-90
+Canvas*menu*rotateTo-right*rotate5.label:	+180
+Canvas*menu*region*rotate.label:	Rotation...
+Canvas*menu*region*linear.label:	Transformation Linéaire...
+Canvas*menu*region*reset.label:		Rétablir Géométrie
+Canvas*menu*region*expand.label:	Agrandir...
+Canvas*menu*region*downscale.label:	Réduire...
+Canvas*menu*region*edit.label:		Editer la Région
+Canvas*menu*region*crop.label:		Rétrécir sur la Région...
+Canvas*menu*region*autocrop.label:	Auto-Rétrécissement
+Canvas*menu*region*complement.label:	Complémentaire Région
+Canvas*menu*region*delimit.label:	Délimiter une Région
+Canvas*menu*delimit-right.label:	Délimiter
+Canvas*menu*delimit-right*delimit1.label:	Zone Connexe Monocolore
+Canvas*menu*delimit-right*delimit2.label:	Complémentaire Zone Connexe
+Canvas*menu*delimit-right*delimit3.label:	Zone Multiconnexe Monocolore
+Canvas*menu*delimit-right*delimit4.label:	Complémentaire Zone Multiconnexe
+Canvas*menu*delimit-right*delimit5.label:	Zone Intervalle de Couleurs
+Canvas*menu*delimit-right*delimit6.label:	Complémentaire Zone Intervalle de Couleurs
+Canvas*menu*delimit-right*delimit7.label:	Annuler
+Canvas*menu*region*ocr.label:		OCR
+
+Canvas*menu*filter.label:		Filtres
+Canvas*menu*filter*invert.label:	Inverser Couleurs
+Canvas*menu*filter*to_grey.label:	Conversion échelle de Gris
+Canvas*menu*filter*contrast.label:	Normaliser Contraste...
+Canvas*menu*filter*gamma.label:		Transformation RVB/Gamma...
+Canvas*menu*filter*floyd_steinberg.label:	Filtre de Floyd-Steinberg...
+Canvas*menu*filter*quantize.label:	Quantifier Couleurs...
+Canvas*menu*filter*solarize.label:	Solariser...
+Canvas*menu*filter*merge.label:		Fusionner Région...
+Canvas*menu*filter*sharpen.label:	Durcir Contraste
+Canvas*menu*filter*smooth.label:	Effet de Dégradé Flou...
+Canvas*menu*filter*dirfilt.label:	Dégradé Flou Directionnel
+Canvas*menu*filter*edge.label:		Détection Bords
+Canvas*menu*filter*oil.label:		Peinture Huile...
+Canvas*menu*filter*noise.label:		Bruitage Aléatoire...
+Canvas*menu*filter*spread.label:	Disperser Pixels...
+Canvas*menu*filter*pixelize.label:	Pixeliser...
+Canvas*menu*filter*emboss.label:	Embosser...
+Canvas*menu*filter*despeckle.label:	Supprimer Granularités...
+Canvas*menu*filter*distort.label:	Distorsion...
+Canvas*menu*filter*perspective.label:	Perspective...
+Canvas*menu*filter*blend.label:		Fondu Radial
+Canvas*menu*filter*userdef.label:	Filtre Programmable...
+Canvas*menu*filter*last.label:		Répéter Dernier Filtre
+Canvas*menu*filter*undo.label:		Défaire Dernier Filtre
+
+Canvas*menu*selector.label:		Options
+Canvas*menu*selector*patterns.label:	Editeur Couleurs et Motifs...
+Canvas*menu*selector*background.label:	Couleur de Fond...
+Canvas*menu*selector*chroma.label:	Variance Chromatique...
+Canvas*menu*selector*fatbits.label:	Editeur de Détails...
+Canvas*menu*selector*tools.label:	Boîte à Outils...
+Canvas*menu*selector*brush.label:	Sélecteur de Pinceaux...
+Canvas*menu*selector*font.label:	Sélecteur de Polices...
+Canvas*menu*selector*magnifier.label:	Loupe...
+Canvas*menu*selector*c_script.label:	Editeur de scripts C...
+Canvas*menu*selector*size.label:	Changer Taille Canevas...
+Canvas*menu*selector*zoom.label:	Changer Zoom...
+Canvas*menu*selector*size_zoom_defs.label:	Taille et Zoom par Défaut...
+Canvas*menu*selector*snap.label:	Déplacements sur maillage
+Canvas*menu*selector*snap_spacing.label:	Espacement du maillage...
+Canvas*menu*selector*grid.label:	Maillage Visible
+Canvas*menu*selector*transparent.label:	Régions clignotantes
+Canvas*menu*selector*interpolation.label:	Interpolation en réduction
+Canvas*menu*selector*grid_param.label:	Paramètres Maillage...
+Canvas*menu*selector*simple.label:	Menu Flottant Simplifié
+Canvas*menu*selector*hide_menubar.label:	Cacher Barre de Menu
+Canvas*menu*selector*left_sb.label:	Barre défilement à gauche
+Canvas*menu*selector*top_sb.label:	Barre défilement en haut
+Canvas*menu*selector*help.label:	Aide
+
+Canvas*menu*alpha.label:		α
+Canvas*menu*alpha*mode0.label:		Mode: RVB
+Canvas*menu*alpha*mode1.label:		Mode: RVB+transparence
+Canvas*menu*alpha*mode2.label:		Mode: RVB+alpha
+Canvas*menu*alpha*mode3.label:		Mode: alpha
+Canvas*menu*alpha*params.label:		Paramètres alpha...
+Canvas*menu*alpha*create.label:		Créer canal alpha
+Canvas*menu*alpha*set.label:		Affecter canal alpha
+Canvas*menu*alpha*edit.label:		Editer canal alpha
+Canvas*menu*alpha*memory.label:		Mémoriser canal alpha
+Canvas*menu*alpha*delete.label:		Supprimer canal alpha
+
+Canvas*menu*help.label:		Aide
+Canvas*menu*help*intro.label:	Introduction
+Canvas*menu*help*tools.label:	Boîte à outils
+Canvas*menu*help*canvas.label:	Canevas graphique
+Canvas*menu*help*about.label:	A propos
+Canvas*menu*help*copyright.label:	Licence
+
+Canvas*memory*popup-menu.label:	Gestionnaire Mémoire
+Canvas*memory*stack.label:	Mémoriser Région/Canevas
+Canvas*memory*recall.label:	Rappeler Item Marqué
+Canvas*memory*edit.label:	Editer Item Marqué
+Canvas*memory*discard.label:	Supprimer Item Marqué
+Canvas*memory*scroll.label:	Faire Dérouler
+Canvas*memory*erase.label:	Effacer Entièrement
+Canvas*memory*origin.label:	Réinitialiser Origine de la Région
+Canvas*memory*to_alpha.label:	Région -> Canal alpha
+Canvas*memory*to_mask.label:	Région -> Masque Noir & Blanc
+Canvas*memory*to_rgba.label:	Région -> Composantes RVBα
+Canvas*memory*merge_rgba.label:	Combiner canaux RVBα en Mémoire...
+
+!!!! This starts the Canvas Popup Menu
+*paintBox*popup-menu.label:		Menu Général
+!Popup File Menu
+*paintBox*popup-menu.File.label:			Fichier
+*paintBox*popup-menu.File-right.label:			Fichier
+*paintBox*popup-menu.File-right.open.label:		Ouvrir Image...
+*paintBox*popup-menu.File-right.save.label:		Sauvegarder
+*paintBox*popup-menu.File-right.saveas.label:		Sauvegarder sous...
+*paintBox*popup-menu.File-right.saveregion.label:	Sauvegarder Région...
+*paintBox*popup-menu.File-right.load-mem.label:		Mettre en Mémoire...
+*paintBox*popup-menu.File-right.revert.label:		Recharger l'image...
+*paintBox*popup-menu.File-right.loaded.label:		Fichiers chargés...
+*paintBox*popup-menu.File-right.print.label:		Imprimer...
+*paintBox*popup-menu.File-right.extern.label:		Visualiseur Externe...
+*paintBox*popup-menu.File-right.close.label:		Fermer
+!Popup Edit Menu
+*paintBox*popup-menu.Edit.label:		Editer
+*paintBox*popup-menu.Edit-right.label:		Editer
+*paintBox*popup-menu.Edit-right.undo.label:	Défaire
+*paintBox*popup-menu.Edit-right.redo.label:	Refaire
+*paintBox*popup-menu.Edit-right.undosize.label:	Niveau Mémoire...
+*paintBox*popup-menu.Edit-right.refresh.label:	Rafraîchir
+*paintBox*popup-menu.Edit-right.cut.label:	Découper
+*paintBox*popup-menu.Edit-right.copy.label:	Copier
+*paintBox*popup-menu.Edit-right.paste.label:	Coller
+*paintBox*popup-menu.Edit-right.clear.label:	Effacer
+*paintBox*popup-menu.Edit-right.all.label:	Sélectionner Tout
+*paintBox*popup-menu.Edit-right.unselect.label:	Désélectionner
+*paintBox*popup-menu.Edit-right.dup.label:	Dupliquer
+*paintBox*popup-menu.Edit-right.erase.label:	Effacer en Totalité
+*paintBox*popup-menu.Edit-right.clone_canvas.label:    Cloner le Canevas
+*paintBox*popup-menu.Edit-right.clonezoom_canvas.label:   Cloner avec Zoom
+*paintBox*popup-menu.Edit-right.screenshot.label:	Capturer...
+! popup Line Menu
+*paintBox*popup-menu.Line.label:	Trait
+*paintBox*popup-menu.Line-right.label:	Trait
+*paintBox*popup-menu.Line-right.linestyle.label:	Style de ligne...
+! popup Font Menu
+*paintBox*popup-menu.Text.label:	Texte
+*paintBox*popup-menu.Text-right.label:	Texte
+*paintBox*popup-menu.Text-right.select.label:	Navigateur de Polices...
+*paintBox*popup-menu.Text-right.write.label:	Ecrire Texte
+
+!Popup Region Menu
+*paintBox*popup-menu.Region.label:		Région
+*paintBox*popup-menu.Region-right.label:		Région
+*paintBox*popup-menu.Region-right.flipX.label:		Symétrie axiale X
+*paintBox*popup-menu.Region-right.flipY.label:		Symétrie axiale Y
+*paintBox*popup-menu.Region-right.rotateTo.label:	Rotation d'angle
+*paintBox*popup-menu.Region-right.rotate.label:	Rotation...
+*paintBox*popup-menu.Region-right.rotateTo-right.label:	Angle
+*paintBox*popup-menu.Region-right.rotateTo-right*rotate1.label:	+90
+*paintBox*popup-menu.Region-right.rotateTo-right*rotate2.label:	+45
+*paintBox*popup-menu.Region-right.rotateTo-right*rotate3.label:	-45
+*paintBox*popup-menu.Region-right.rotateTo-right*rotate4.label:	-90
+*paintBox*popup-menu.Region-right.rotateTo-right*rotate5.label:	+180
+*paintBox*popup-menu.Region-right.linear.label:	Transformation Linéaire...
+*paintBox*popup-menu.Region-right.reset.label:	Rétablir Géométrie
+*paintBox*popup-menu.Region-right.expand.label:	Agrandir...
+*paintBox*popup-menu.Region-right.downscale.label:	Réduire...
+*paintBox*popup-menu.Region-right.reset.label:	Rétablir Géométrie
+*paintBox*popup-menu.Region-right.edit.label:	Editer la Région
+*paintBox*popup-menu.Region-right.crop.label:	Rétrécir sur la Région...
+*paintBox*popup-menu.Region-right.autocrop.label:	Auto-Rétrécissement
+*paintBox*popup-menu.Region-right.complement.label:	Complémentaire Région
+*paintBox*popup-menu.Region-right.delimit.label:	Délimiter la Région
+*paintBox*popup-menu.Region-right.delimit-right.label:	Délimiter
+*paintBox*popup-menu.Region-right.delimit-right*delimit1.label:	Zone Connexe Monocolore
+*paintBox*popup-menu.Region-right.delimit-right*delimit2.label:	Complémentaire Zone Connexe
+*paintBox*popup-menu.Region-right.delimit-right*delimit3.label:	Zone Multiconnexe Monocolore
+*paintBox*popup-menu.Region-right.delimit-right*delimit4.label:	Complémentaire Zone Multiconnexe
+*paintBox*popup-menu.Region-right.delimit-right*delimit5.label:	Zone Intervalle de Couleurs
+*paintBox*popup-menu.Region-right.delimit-right*delimit6.label:	Complémentaire Zone Intervalle de Couleurs
+*paintBox*popup-menu.Region-right.delimit-right*delimit7.label:	Annuler
+*paintBox*popup-menu.Region-right.ocr.label:	OCR
+!Popup Filter Menu
+*paintBox*popup-menu.Filters.label:		Filtres
+*paintBox*popup-menu.Filters-right.label:		Filtres
+*paintBox*popup-menu.Filters-right.invert.label:	Inverser Couleurs
+*paintBox*popup-menu.Filters-right.to_grey.label:	Conversion échelle de Gris
+*paintBox*popup-menu.Filters-right.contrast.label:	Normaliser Contraste...
+*paintBox*popup-menu.Filters-right.gamma.label:		Transformation RVB/Gamma...
+*paintBox*popup-menu.Filters-right.floyd_steinberg.label:	Filtre de Floyd-Steinberg...
+*paintBox*popup-menu.Filters-right.quantize.label:	Quantifier Couleurs...
+*paintBox*popup-menu.Filters-right.solarize.label:	Solariser...
+*paintBox*popup-menu.Filters-right.merge.label:		Fusionner Région...
+*paintBox*popup-menu.Filters-right.sharpen.label:	Durcir Contraste
+*paintBox*popup-menu.Filters-right.smooth.label:	Effet de Dégradé Flou...
+*paintBox*popup-menu.Filters-right.dirfilt.label:	Dégradé Flou Directionnel
+*paintBox*popup-menu.Filters-right.edge.label:		Détection Bords
+*paintBox*popup-menu.Filters-right.oil.label:		Peinture Huile...
+*paintBox*popup-menu.Filters-right.noise.label:		Bruitage Aléatoire...
+*paintBox*popup-menu.Filters-right.spread.label:	Disperser Pixels...
+*paintBox*popup-menu.Filters-right.pixelize.label:	Pixeliser...
+*paintBox*popup-menu.Filters-right.emboss.label:	Embosser...
+*paintBox*popup-menu.Filters-right.despeckle.label:	Supprimer Granularités...
+*paintBox*popup-menu.Filters-right.distort.label:	Distorsion...
+*paintBox*popup-menu.Filters-right.perspective.label:	Perspective...
+*paintBox*popup-menu.Filters-right.blend.label:		Fondu Radial
+*paintBox*popup-menu.Filters-right.userdef.label:	Filtre Programmable...
+*paintBox*popup-menu.Filters-right.last.label:		Répéter Dernier Filtre
+*paintBox*popup-menu.Filters-right.undo.label:		Défaire Dernier Filtre
+!Popup Selectors Menu
+*paintBox*popup-menu.Selectors.label:	Sélecteurs
+*paintBox*popup-menu.Selectors-right.label:	Sélecteurs
+*paintBox*popup-menu.Selectors-right*patterns.label:	Editeur Couleurs et Motifs...
+*paintBox*popup-menu.Selectors-right*background.label:	Couleur de Fond...
+*paintBox*popup-menu.Selectors-right*chroma.label:	Variance Chromatique...
+*paintBox*popup-menu.Selectors-right*fatbits.label:	Editeur de Détails...
+*paintBox*popup-menu.Selectors-right*tools.label:	Boîte à Outils...
+*paintBox*popup-menu.Selectors-right*brush.label:	Sélecteur de Pinceaux...
+*paintBox*popup-menu.Selectors-right*font.label:	Sélecteur de Polices...
+*paintBox*popup-menu.Selectors-right*magnifier.label:	Loupe...
+*paintBox*popup-menu.Selectors-right*c_script.label:	Editeur de scripts C...
+*paintBox*popup-menu.Selectors-right*size.label:	Changer Taille Canevas...
+*paintBox*popup-menu.Selectors-right*zoom.label:	Changer Zoom...
+*paintBox*popup-menu.Selectors-right*size_zoom_defs.label:	Taille et Zoom par Défaut...
+*paintBox*popup-menu.Selectors-right*snap.label:		Déplacements sur maillage
+*paintBox*popup-menu.Selectors-right*snap_spacing.label:	Espacement du maillage...
+*paintBox*popup-menu.Selectors-right*grid.label:		Maillage Visible
+*paintBox*popup-menu.Selectors-right*grid_param.label:		Paramètres Maillage
+*paintBox*popup-menu.Selectors-right*transparent.label:		Régions clignotantes
+*paintBox*popup-menu.Selectors-right*interpolation.label:	Interpolation en réduction
+*paintBox*popup-menu.Selectors-right.hide_menubar.label:	Cacher Barre de Menu
+*paintBox*popup-menu.Selectors-right.show_menubar.label:	Montrer Barre de Menu
+*paintBox*popup-menu.Selectors-right.left_sb.label:	Barre défilement à gauche
+*paintBox*popup-menu.Selectors-right.top_sb.label:	Barre défilement en haut
+*paintBox*popup-menu.Selectors-right*help.label:		Aide
+
+*paintBox*popup-menu.Alpha.label:		Alpha
+*paintBox*popup-menu.Alpha-right.label:		Canal Alpha
+*paintBox*popup-menu.Alpha-right*mode0.label:		Mode: RVB
+*paintBox*popup-menu.Alpha-right*mode1.label:		Mode: RVB+transparence
+*paintBox*popup-menu.Alpha-right*mode2.label:		Mode: RVB+alpha
+*paintBox*popup-menu.Alpha-right*mode3.label:		Mode: alpha
+*paintBox*popup-menu.Alpha-right*params.label:		Paramètres alpha...
+*paintBox*popup-menu.Alpha-right*create.label:		Créer canal alpha
+*paintBox*popup-menu.Alpha-right*set.label:		Affecter canal alpha
+*paintBox*popup-menu.Alpha-right*edit.label:		Editer canal alpha
+*paintBox*popup-menu.Alpha-right*memory.label:		Mémoriser canal alpha
+*paintBox*popup-menu.Alpha-right*delete.label:		Supprimer canal alpha
+
+*paintBox*popup-menu.Memory.label:	Mémoire
+*paintBox*popup-menu.Memory-right.label:	Gestionnaire Mémoire
+*paintBox*popup-menu.Memory-right*stack.label:	Mémoriser Région/Canevas
+*paintBox*popup-menu.Memory-right*recall.label:	Rappeler Item
+*paintBox*popup-menu.Memory-right*recall.label:	Editer Item
+*paintBox*popup-menu.Memory-right*discard.label:	Supprimer Item
+*paintBox*popup-menu.Memory-right*erase.label:	Effacer Entièrement
+*paintBox*popup-menu.Memory-right*origin.label:	Réinitialiser Origine de la Région
+*paintBox*popup-menu.Memory-right*to_alpha.label:	Région -> Canal alpha
+*paintBox*popup-menu.Memory-right*to_mask.label:		Région -> Masque Noir & Blanc
+*paintBox*popup-menu.Memory-right*to_rgba.label:		Région -> Composantes RVBα
+*paintBox*popup-menu.Memory-right*merge_rgba.label:	Combiner canaux RVBα en Mémoire...
+
+
+!
+!  Filebrowser defaults
+!
+
+*filebrowser.title:		XPaint / Sélecteur de Fichiers
+*filebrowser*text.width:		400
+
+xpaint*brush*box.width: 328
+xpaint*brush.title:			XPaint / Pinceaux
+xpaint*brush.iconName:			XPaint Pinceaux
+
+!
+!  Color picker
+!
+*colorPicker*match.label:		Saisie
+*colorPicker*form.Label.width:	50
+*colorPicker*Scrollbar.height:	16
+
+*chroma.title:			XPaint / Variance Chromatique
+*chroma.iconName:			XPaint Chroma
+*chroma*varianceLabel.width:	120
+*chroma*varianceBar.length:	140
+*chroma*delta.label:		Delta Pixel
+*chroma*selectModeLabel.label:	Mode de Sélection
+*chroma*mode0.label:		Toutes Teintes
+*chroma*mode1.label:		Omettre Variance Teinte
+*chroma*mode2.label:		Variance de Teinte
+*chroma*Label.justify:		left
+
+xpaint*popup-dialog-form*label.justify:		left
+Canvas*popup-dialog-form*label.justify: 	left
+
+*colorEditDialog.title:		XPaint / Sélecteur de Couleurs
+
+xpaint*helpDialog.title:		XPaint / Navigateur d'Aide
+xpaint*helpDialog.iconName:		XPaint Aide
+!xpaint*helpDialog.form.title.font:	*-times-bold-r-normal--17-*
+xpaint*helpDialog.form.title.label:	XPaint 2.9.9, Aide & Information
+!xpaint*helpDialog.form.form.font:	*-times-medium-r-normal--14-*
+xpaint*helpDialog*textTitle.width:	560
+xpaint*helpDialog*textText.width:	560
+xpaint*helpDialog*textText.height:	356
+xpaint*helpDialog*topicPort.width:	280
+xpaint*helpDialog*topicPort.height:	380
+xpaint*helpDialog*done.label:		Fermer
+xpaint*helpDialog*next.label:		Suiv.
+xpaint*helpDialog*prev.label:		Préc.
+xpaint*helpDialog*down.label:		Page suivante
+xpaint*helpDialog*up.label:		Page précéd.
+
+xpaint*magnifier.title:			XPaint / Loupe
+xpaint*magnifier*rotate.label:		Rotation
+xpaint*magnifier*symmetry.label:	syméTrie
+xpaint*magnifier*freeze.label:		F/Geler
+xpaint*magnifier*smooth.label:		liSser
+xpaint*magnifier*info.label:		Info
+xpaint*magnifier*memory.label:		Mémoriser
+xpaint*magnifier*canvas.label:		Canevas
+xpaint*magnifier*exit.label:		Quitter
+
+xpaint*filebrowser*browser*Label.background:	#dcdad5
+xpaint*filebrowser*dpi.label:		DPI
+xpaint*filebrowser*page.label:		Page
+xpaint*filebrowser*zoom.label:		Zoom
+xpaint*filebrowser*alpha.label:		Alpha
+xpaint*filebrowser*refresh.label:	Recharger
+xpaint*filebrowser*delete.label:	Supprimer
+xpaint*filebrowser*edit.label:		Editer
+xpaint*filebrowser*create.label:	Créer LXP
