@@ -1,0 +1,3 @@
+.include /usr/lib/systemd/system/dropbox@.service
+[Service]
+Environment=DISPLAY=:0
