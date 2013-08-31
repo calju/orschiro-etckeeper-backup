@@ -1,0 +1,20 @@
+[connection]
+id=Auto VGV75192AB592
+uuid=41ce1d4c-9291-4404-8771-583e4cae3054
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=VGV75192AB592
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto
