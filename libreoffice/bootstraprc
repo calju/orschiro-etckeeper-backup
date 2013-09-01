@@ -3,5 +3,5 @@ ErrorReportPort=80
 ErrorReportServer=report.libreoffice.org
 [Bootstrap]
 InstallMode=<installmode>
-ProductKey=LibreOffice 4.0
+ProductKey=LibreOffice 4.1
 UserInstallation=$SYSUSERCONFIG/libreoffice/4
