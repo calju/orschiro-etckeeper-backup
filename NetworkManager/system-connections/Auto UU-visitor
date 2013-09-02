@@ -1,0 +1,15 @@
+[connection]
+id=Auto UU-visitor
+uuid=9206fc28-7455-4553-8361-de453b304ed3
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=UU-visitor
+mode=infrastructure
+mac-address=00:16:EA:EF:90:62
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto
