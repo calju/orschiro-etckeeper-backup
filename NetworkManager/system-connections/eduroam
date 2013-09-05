@@ -3,8 +3,9 @@ method=auto
 
 [connection]
 id=eduroam
-uuid=6519bc2e-4cc6-4190-ba1c-3b0c68faea0b
+uuid=e17fc065-0040-405c-9442-0f21df8276b6
 type=802-11-wireless
+timestamp=1378302166
 
 [802-11-wireless-security]
 key-mgmt=wpa-eap
@@ -13,6 +14,7 @@ key-mgmt=wpa-eap
 ssid=eduroam
 mode=infrastructure
 mac-address=00:16:EA:EF:90:62
+seen-bssids=00:1A:1E:1E:0A:B0;00:1A:1E:1E:0E:B0;00:1A:1E:1E:0A:A0;00:1A:1E:1E:0E:A0;00:1A:1E:1D:E6:E0;
 security=802-11-wireless-security
 
 [802-1x]
