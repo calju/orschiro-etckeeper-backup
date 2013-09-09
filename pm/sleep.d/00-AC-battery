@@ -1,0 +1,18 @@
+#!/bin/sh
+
+case $1 in
+    resume|thaw)
+		if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1
+		then
+			echo "Calling /usr/local/bin/powersaving battery"
+    		/usr/local/bin/powersaving battery	
+		else
+			echo "Calling /usr/local/bin/powersaving AC"
+    		/usr/local/bin/powersaving AC
+		fi
+    ;;
+    *)
+		echo "Not running 90-AC-battery properly"
+	;;
+esac
+exit 0
