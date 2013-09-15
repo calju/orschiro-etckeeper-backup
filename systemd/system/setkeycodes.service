@@ -3,7 +3,7 @@ Description=Assign screen rotation hardware button to a free keycode on boot
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/setkeycodes 6c 131 0x66 132
+ExecStart=/usr/bin/setkeycodes 0x67 240 0x6c 241 0x68 242 0x66 243
 
 [Install]
 WantedBy=multi-user.target
