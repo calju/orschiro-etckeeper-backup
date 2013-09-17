@@ -37,5 +37,8 @@ net.ipv6.conf.all.forwarding = 0
 #kernel.panic_on_oops = 1
 #kernel.panic = 600
 
+# Disable SysRq key to avoid console security issues.
+kernel.sysrq = 0
+
 # Crashplan setting to watch files
 fs.inotify.max_user_watches=1048576
