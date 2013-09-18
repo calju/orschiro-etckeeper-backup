@@ -1,0 +1,8 @@
+# Auto-written by gtk2_prefs. Do not edit.
+
+gtk-theme-name = "Zukitwo"
+style "user-font"
+{
+	font_name="Droid Sans 10"
+}
+widget_class "*" style "user-font"
