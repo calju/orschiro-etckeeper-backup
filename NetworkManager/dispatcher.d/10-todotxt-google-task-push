@@ -5,7 +5,8 @@ username=$(who | cut -d' ' -f1 | sort | uniq)
 
 case "$2" in
         up)
-			su -c "todo.sh google push" $username
+			su -c "todo.sh -d /home/orschiro/Dropbox/Todo/todo.cfg -t google pull" $username
+			su -c "todo.sh -d /home/orschiro/Dropbox/Todo/todo.cfg -t google push" $username
         ;;
         down)
         ;;
