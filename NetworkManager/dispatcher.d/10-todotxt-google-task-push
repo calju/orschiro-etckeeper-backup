@@ -5,9 +5,8 @@ username=$(who | cut -d' ' -f1 | sort | uniq)
 
 case "$2" in
         up)
-			systemctl restart dropbox@$username
+			su -c "todo.sh google push" $username
         ;;
         down)
-			systemctl stop dropbox@$username
         ;;
 esac
