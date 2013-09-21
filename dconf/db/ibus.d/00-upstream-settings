@@ -13,7 +13,7 @@ enable-by-default=false
 engines-order=@as []
 preload-engines=@as []
 switcher-delay-time=400
-use-global-engine=false
+use-global-engine=true
 use-system-keyboard-layout=false
 version=''
 
