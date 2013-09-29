@@ -2,7 +2,7 @@
 % Note: the first line of this file must match the corresponding line
 % in "etex.src" and "etexdefs.lib", otherwise fallback will be used.
 
-% $Id: language.us.def 18737 2010-06-04 17:09:02Z karl $
+% $Id: language.us.def 29720 2013-04-07 18:47:47Z karl $
 % language.us.def (and the start of language.def)
 % - initial hyphenation patterns.
 
@@ -25,10 +25,10 @@
                                          %%% line of the file
 
 % from dehyph-exptl:
-\addlanguage{german-x-2012-05-30}{dehypht-x-2012-05-30.tex}{}{2}{2}
-\addlanguage{german-x-latest}{dehypht-x-2012-05-30.tex}{}{2}{2}
-\addlanguage{ngerman-x-2012-05-30}{dehyphn-x-2012-05-30.tex}{}{2}{2}
-\addlanguage{ngerman-x-latest}{dehyphn-x-2012-05-30.tex}{}{2}{2}
+\addlanguage{german-x-2013-05-26}{dehypht-x-2013-05-26.tex}{}{2}{2}
+\addlanguage{german-x-latest}{dehypht-x-2013-05-26.tex}{}{2}{2}
+\addlanguage{ngerman-x-2013-05-26}{dehyphn-x-2013-05-26.tex}{}{2}{2}
+\addlanguage{ngerman-x-latest}{dehyphn-x-2013-05-26.tex}{}{2}{2}
 % from hyphen-afrikaans:
 \addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
 % from hyphen-ancientgreek:
@@ -82,6 +82,8 @@
 \addlanguage{friulan}{loadhyph-fur.tex}{}{2}{2}
 % from hyphen-galician:
 \addlanguage{galician}{loadhyph-gl.tex}{}{2}{2}
+% from hyphen-georgian:
+\addlanguage{georgian}{loadhyph-ka.tex}{}{2}{3}
 % from hyphen-german:
 \addlanguage{german}{loadhyph-de-1901.tex}{}{2}{2}
 \addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
@@ -130,11 +132,15 @@
 \addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
 \addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
 \addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
+% from hyphen-piedmontese:
+\addlanguage{piedmontese}{loadhyph-pms.tex}{}{2}{2}
 % from hyphen-polish:
 \addlanguage{polish}{loadhyph-pl.tex}{}{2}{2}
 % from hyphen-portuguese:
 \addlanguage{portuguese}{loadhyph-pt.tex}{}{2}{3}
 \addlanguage{portuges}{loadhyph-pt.tex}{}{2}{3}
+\addlanguage{brazil}{loadhyph-pt.tex}{}{2}{3}
+\addlanguage{brazilian}{loadhyph-pt.tex}{}{2}{3}
 % from hyphen-romanian:
 \addlanguage{romanian}{loadhyph-ro.tex}{}{2}{2}
 % from hyphen-romansh:
@@ -142,7 +148,7 @@
 % from hyphen-russian:
 \addlanguage{russian}{loadhyph-ru.tex}{}{2}{2}
 % from hyphen-sanskrit:
-\addlanguage{sanskrit}{loadhyph-sa.tex}{}{1}{5}
+\addlanguage{sanskrit}{loadhyph-sa.tex}{}{1}{3}
 % from hyphen-serbian:
 \addlanguage{serbian}{loadhyph-sr-latn.tex}{}{2}{2}
 \addlanguage{serbianc}{loadhyph-sr-cyrl.tex}{}{2}{2}
@@ -156,6 +162,8 @@
 \addlanguage{espanol}{loadhyph-es.tex}{}{2}{2}
 % from hyphen-swedish:
 \addlanguage{swedish}{loadhyph-sv.tex}{}{2}{2}
+% from hyphen-thai:
+\addlanguage{thai}{loadhyph-th.tex}{}{2}{3}
 % from hyphen-turkish:
 \addlanguage{turkish}{loadhyph-tr.tex}{}{2}{2}
 % from hyphen-turkmen:
