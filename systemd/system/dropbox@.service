@@ -1,3 +1,9 @@
 .include /usr/lib/systemd/system/dropbox@.service
+[Unit]
+After=graphical.target
+
 [Service]
 Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target

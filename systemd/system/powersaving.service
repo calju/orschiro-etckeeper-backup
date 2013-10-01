@@ -1,0 +1,10 @@
+[Unit]
+Description=Run powersaving script in X
+After=graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/powersaving
+
+[Install]
+WantedBy=graphical.target
