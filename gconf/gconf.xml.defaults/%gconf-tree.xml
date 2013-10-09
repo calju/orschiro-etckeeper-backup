@@ -1586,7 +1586,7 @@
 			<dir name="nautilus-actions">
 				<dir name="mandatory">
 					<dir name="na-desktop">
-						<entry name="locked" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+						<entry name="locked" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 							<local_schema locale="C" short_desc="Whether the Desktop I/O provider is locked">
 								<default type="bool" value="false"/>
 								<longdesc>When set to true (most probably as a mandatory key), this prevents all items, menus and actions, read from .desktop files to being modified in NACT.</longdesc>
@@ -1594,7 +1594,7 @@
 						</entry>
 					</dir>
 					<dir name="na-gconf">
-						<entry name="locked" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+						<entry name="locked" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 							<local_schema locale="C" short_desc="Whether the GConf I/O provider is locked">
 								<default type="bool" value="false"/>
 								<longdesc>When set to true (most probably as a mandatory key), this prevents all items, menus and actions, read from GConf to being modified in NACT.</longdesc>
@@ -1602,7 +1602,7 @@
 						</entry>
 					</dir>
 					<dir name="all">
-						<entry name="locked" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+						<entry name="locked" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 							<local_schema locale="C" short_desc="Whether the whole configuration is locked">
 								<default type="bool" value="false"/>
 								<longdesc>The whole configuration must be understood here as the global set and order of menus and actions.
@@ -1613,7 +1613,7 @@ As the order of items is also locked, the level zero itself cannot be modified, 
 					</dir>
 				</dir>
 				<dir name="preferences">
-					<entry name="schemes" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="schemes" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of default schemes">
 							<default type="list" ltype="string">
 							</default>
@@ -1621,82 +1621,82 @@ As the order of items is also locked, the level zero itself cannot be modified, 
 A default default list is harcoded in nautilus-actions-config-tool, which may be updated by the user.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="preferences-editor" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="preferences-editor" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the preferences dialog">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the preferences dialog ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-window" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="main-window" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the main window">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the main window ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-tools-toolbar" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="main-tools-toolbar" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Display Tools toolbar">
 							<default type="bool" value="false"/>
 							<longdesc>Whether to display or not the Tools toolbar in the main window.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-paned" mtime="1366434638" type="schema" stype="int" owner="nautilus-actions">
+					<entry name="main-paned" mtime="1381321737" type="schema" stype="int" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Main pane position">
 							<default type="int" value="100"/>
 							<longdesc>Width of the main window pane ; default is set by the UI manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-help-toolbar" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="main-help-toolbar" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Display Help toolbar">
 							<default type="bool" value="false"/>
 							<longdesc>Whether to display or not the Help toolbar in the main window.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-file-toolbar" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="main-file-toolbar" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Display File toolbar">
 							<default type="bool" value="true"/>
 							<longdesc>Whether to display or not the File toolbar in the main window.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="main-edit-toolbar" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="main-edit-toolbar" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Display Edit toolbar">
 							<default type="bool" value="false"/>
 							<longdesc>Whether to display or not the Edit toolbar in the main window.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-relabel-profiles" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="iprefs-relabel-profiles" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether profiles should be relabeled when pasted or duplicated">
 							<default type="bool" value="true"/>
 							<longdesc>Whether profiles should be relabeled when pasted or duplicated.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-relabel-menus" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="iprefs-relabel-menus" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether menus should be relabeled when pasted or duplicated">
 							<default type="bool" value="true"/>
 							<longdesc>Whether menus should be relabeled when pasted or duplicated.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-relabel-actions" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="iprefs-relabel-actions" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether actions should be relabeled when pasted or duplicated">
 							<default type="bool" value="true"/>
 							<longdesc>Whether actions should be relabeled when pasted or duplicated.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-level-zero" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="iprefs-level-zero" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of items at first level of the hierarchy">
 							<default type="list" ltype="string">
 							</default>
 							<longdesc>UUID of the items at the first level of the hierarchy. If this key is not found or empty, then all found items are considered as a flat list.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-create-root-menu" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="iprefs-create-root-menu" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Define a &apos;Nautilus-Actions actions&apos; root menu">
 							<default type="bool" value="true"/>
 							<longdesc>If TRUE, then a &apos;Nautilus-Actions actions&apos; item will be defined in the Nautilus context menu, and will be the root menu of all available actions.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-alphabetical-order" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="iprefs-alphabetical-order" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Sort mode">
 							<default type="string">
 								<stringvalue>0</stringvalue>
@@ -1707,20 +1707,20 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 - &quot;ManualOrder&quot;: user is free to reorder them via Nautilus-Actions configuration tool.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="iprefs-add-about-item" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="iprefs-add-about-item" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Add an &apos;About&apos; item in the Nautilus context menu">
 							<default type="bool" value="true"/>
 							<longdesc>If TRUE, and if the user has defined a single root menu for its actions, then an &apos;About Nautilus-Actions&apos; will be displayed at end of the first submenu.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="io-providers-order" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="io-providers-order" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="I/O providers Write priority">
 							<default type="list" ltype="string">
 							</default>
 							<longdesc>The order in which I/O providers are tested when we need to write a new item down to a storage subsystem.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-mode" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="import-mode" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Import mode">
 							<default type="string">
 								<stringvalue>NoImport</stringvalue>
@@ -1732,13 +1732,13 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 - &quot;Ask&quot;: ask the user each time.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-keep-choicee" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="import-keep-choicee" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Keep last chosen import mode">
 							<default type="bool" value="false"/>
 							<longdesc>Whether the import system should reuse the last chosen import mode.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-folder-uri" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="import-folder-uri" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Last selected folder">
 							<default type="string">
 								<stringvalue>/tmp</stringvalue>
@@ -1746,14 +1746,14 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 							<longdesc>Last folder selected when choosing a folder from where import new actions.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-assistant" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="import-assistant" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the import assistant window">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the import assistant window ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-ask-user-last-mode" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="import-ask-user-last-mode" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Last import mode chosen by the user">
 							<default type="string">
 								<stringvalue>NoImport</stringvalue>
@@ -1764,14 +1764,14 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 - &quot;Override&quot;: override the existing action with the imported one.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="import-ask-user" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="import-ask-user" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the interaction dialog at import time">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the interaction dialog at import time ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="ifolders-uri" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="ifolders-uri" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Last selected folder">
 							<default type="string">
 								<stringvalue>/bin</stringvalue>
@@ -1779,21 +1779,21 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 							<longdesc>Last folder selected when browsing for an URI in the Folders tab.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="ifolders-chooser" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="ifolders-chooser" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the URI chooser window">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the URI  chooser window in the Folders tab ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="icommand-legend-dialog" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="icommand-legend-dialog" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the Legend dialog">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the Legend dialog ; default is set by the UI manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="icommand-folder-uri" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="icommand-folder-uri" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Last selected folder">
 							<default type="string">
 								<stringvalue>/bin</stringvalue>
@@ -1801,14 +1801,14 @@ A default default list is harcoded in nautilus-actions-config-tool, which may be
 							<longdesc>Last folder selected when browsing for a command in the Command tab.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="icommand-command-chooser" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="icommand-command-chooser" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the command chooser window">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the command chooser window in the Command tab ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="export-format" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="export-format" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Preferred export format">
 							<default type="string">
 								<stringvalue>/tmp</stringvalue>
@@ -1821,7 +1821,7 @@ Possible values are:
 - &quot;Ask&quot;: the user will be asked at runtime for the format he wishes use.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="export-folder-uri" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="export-folder-uri" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Last selected folder">
 							<default type="string">
 								<stringvalue>/tmp</stringvalue>
@@ -1829,32 +1829,32 @@ Possible values are:
 							<longdesc>Last folder selected when choosing a folder where to export the actions.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="export-assistant" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="int">
+					<entry name="export-assistant" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="int">
 						<local_schema locale="C" short_desc="Position and size of the export assistant window">
 							<default type="list" ltype="int">
 							</default>
 							<longdesc>Position and size of the export assistant window ; default is set by the window manager.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="auto-save-period" mtime="1366434638" type="schema" stype="int" owner="nautilus-actions">
+					<entry name="auto-save-period" mtime="1381321737" type="schema" stype="int" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Periodicity of the auto-save">
 							<default type="int" value="5"/>
 							<longdesc>Defines the periodicity in minutes of the automatic save.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="auto-save-on" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="auto-save-on" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the auto-save feature should be activated">
 							<default type="bool" value="false"/>
 							<longdesc>If TRUE, the pending modifications will be periodically and automatically saved.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="assistant-esc-quit" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="assistant-esc-quit" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the Esc key should close the assistants">
 							<default type="bool" value="true"/>
 							<longdesc>If TRUE, assistant may be closed by hitting the Esc key.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="assistant-esc-confirm" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="assistant-esc-confirm" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Ask for a confirmation when quitting by Esc">
 							<default type="bool" value="true"/>
 							<longdesc>If TRUE, a confirmation will be requested when quitting an assistant by hitting the Esc key.</longdesc>
@@ -1862,7 +1862,7 @@ Possible values are:
 					</entry>
 				</dir>
 				<dir name="configurations">
-					<entry name="folders" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="folders" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of folders">
 							<default type="list" ltype="string">
 								<li type="string">
@@ -1875,7 +1875,7 @@ This is only used when there is no selection, or the selection only contains dir
 Defaults to &apos;/&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="schemes" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="schemes" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of schemes to be matched against those of selected file(s)/folder(s)">
 							<default type="list" ltype="string">
 								<li type="string">
@@ -1897,7 +1897,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;file&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="accept-multiple-files" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="accept-multiple-files" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the selection may be multiple">
 							<default type="bool" value="false"/>
 							<longdesc>If you need more than one files or folders to be selected, set this key to &apos;true&apos;. If you want just one file or folder, set it to &apos;false&apos;.
@@ -1905,7 +1905,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;false&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="isdir" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="isdir" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the profile applies to folders">
 							<default type="bool" value="false"/>
 							<longdesc>Set to &apos;true&apos; if the selection can have folders, to &apos;false&apos; otherwise.
@@ -1918,7 +1918,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;false&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="isfile" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="isfile" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the profile applies to files">
 							<default type="bool" value="true"/>
 							<longdesc>Set to &apos;true&apos; if the selection can have files, to &apos;false&apos; otherwise.
@@ -1931,7 +1931,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;true&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="mimetypes" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="mimetypes" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of patterns to be matched against the mimetypes of the selected file(s)/folder(s)">
 							<default type="list" ltype="string">
 								<li type="string">
@@ -1943,7 +1943,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;*&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="matchcase" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="matchcase" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the specified basenames are case sensitive (default)">
 							<default type="bool" value="true"/>
 							<longdesc>Must be set to &apos;true&apos; if the filename patterns are case sensitive, to &apos;false&apos; otherwise. E.g., if you need to match a filename in a case-sensitive manner, set this key to &apos;true&apos;. If you also want, for example &apos;*.jpg&apos; to match &apos;photo.JPG&apos;, then set &apos;false&apos;.
@@ -1951,7 +1951,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;true&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="basenames" mtime="1366434638" type="schema" stype="list" owner="nautilus-actions" list_type="string">
+					<entry name="basenames" mtime="1381321737" type="schema" stype="list" owner="nautilus-actions" gettext_domain="nautilus-actions" list_type="string">
 						<local_schema locale="C" short_desc="List of patterns to be matched against the selected file(s)/folder(s)">
 							<default type="list" ltype="string">
 								<li type="string">
@@ -1963,7 +1963,7 @@ This obviously only applies when there is a selection.
 Defaults to &apos;*&apos;.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="parameters" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="parameters" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Parameters of the command">
 							<default type="string">
 								<stringvalue></stringvalue>
@@ -1983,7 +1983,7 @@ The parameters may contain some special tokens which are replaced by the informa
 %%: a percent sign.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="path" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="path" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Path of the command">
 							<default type="string">
 								<stringvalue></stringvalue>
@@ -1991,7 +1991,7 @@ The parameters may contain some special tokens which are replaced by the informa
 							<longdesc>The path of the command to be executed when the user select the menu item in the file manager context menu or in the toolbar.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="toolbar-label" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="toolbar-label" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Label of the toolbar item">
 							<default type="string">
 								<stringvalue></stringvalue>
@@ -2001,14 +2001,14 @@ Note that actual display may depend of your own Desktop Environment preferences.
 Defaults to label of the context menu when not set or empty.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="target-toolbar" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="target-toolbar" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Targets the toolbar">
 							<default type="bool" value="false"/>
 							<longdesc>Whether the action is candidate to be displayed in file manager toolbar.
 Note, that as of Nautilus 2.26, menus can not be candidate to toolbar display.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="target-selection" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="target-selection" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Targets the context menu (default)">
 							<default type="bool" value="true"/>
 							<longdesc>Whether the action of the menu targets the selection file manager context menus.
@@ -2016,14 +2016,14 @@ This used to be the historical behavior.
 Defaults to TRUE.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="enabled" mtime="1366434638" type="schema" stype="bool" owner="nautilus-actions">
+					<entry name="enabled" mtime="1381321737" type="schema" stype="bool" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Whether the action or the menu is enabled (default)">
 							<default type="bool" value="true"/>
 							<longdesc>If the or the menu action is disabled, it will never appear in the file manager context menu.
 Defaults to TRUE.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="icon" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="icon" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Icon of the context menu item">
 							<default type="string">
 								<stringvalue></stringvalue>
@@ -2032,7 +2032,7 @@ Defaults to TRUE.</longdesc>
 May be the localized name of a themed icon, or a full path to any appropriate image.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="tooltip" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="tooltip" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Tooltip of the context menu item">
 							<default type="string">
 								<stringvalue></stringvalue>
@@ -2040,7 +2040,7 @@ May be the localized name of a themed icon, or a full path to any appropriate im
 							<longdesc>The tooltip of the menu item that will appear in the file manager statusbar when the user points to the file manager context menu item with his/her mouse.</longdesc>
 						</local_schema>
 					</entry>
-					<entry name="label" mtime="1366434638" type="schema" stype="string" owner="nautilus-actions">
+					<entry name="label" mtime="1381321737" type="schema" stype="string" owner="nautilus-actions" gettext_domain="nautilus-actions">
 						<local_schema locale="C" short_desc="Label of the context menu item (mandatory)">
 							<default type="string">
 								<stringvalue></stringvalue>
