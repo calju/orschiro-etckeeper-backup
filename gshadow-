@@ -39,4 +39,3 @@ ntp:!::
 polkitd:!::
 rtkit:!::
 usbmux:!::
-gdm:!::
