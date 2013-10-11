@@ -1,5 +1,5 @@
 ### infinality environment variables for extra run-time options ###
-### custom settings by bohoomil, rev. 0.4.1, for freetype2 v. 2.5.x ###
+### custom settings by bohoomil, rev. 0.4.2, for freetype2 v. 2.5.x ###
 ### http://bohoomil.cu.cc ###
 
 XFT_SETTINGS="
