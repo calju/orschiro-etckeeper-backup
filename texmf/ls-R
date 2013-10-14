@@ -12,11 +12,9 @@ xdvi
 
 ./chktex:
 chktexrc
-chktexrc.pacnew
 
 ./dvipdfmx:
 dvipdfmx.cfg
-dvipdfmx.cfg.pacnew
 
 ./dvips:
 config
@@ -33,9 +31,7 @@ config
 
 ./tex/generic/config:
 language.dat
-language.dat.pacnew
 language.def
-language.def.pacnew
 pdftexconfig.tex
 
 ./ttf2pk:
@@ -43,10 +39,8 @@ ttf2pk.cfg
 
 ./web2c:
 fmtutil.cnf
-fmtutil.cnf.pacnew
 mktex.cnf
 texmf.cnf
-texmf.cnf.pacnew
 updmap.cfg
 
 ./xdvi:
