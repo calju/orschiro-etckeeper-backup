@@ -1,10 +1,10 @@
 [connection]
-id=Hier
-uuid=e1b115ef-895c-4ad7-9d0a-b9609c89274a
+id=UU-visitor
+uuid=95a8182e-58a4-4656-a76d-04cd7c6a6843
 type=802-11-wireless
 
 [802-11-wireless]
-ssid=Hier
+ssid=UU-visitor
 mode=infrastructure
 mac-address=00:16:EA:EF:90:62
 
