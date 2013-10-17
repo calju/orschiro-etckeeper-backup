@@ -465,6 +465,7 @@ maybe chmod 0600 './NetworkManager/system-connections/Auto HTC-035dd52c-6c30-48e
 maybe chmod 0600 './NetworkManager/system-connections/Auto HTC Spot'
 maybe chmod 0600 './NetworkManager/system-connections/Auto Idiotensicher'
 maybe chmod 0600 './NetworkManager/system-connections/Auto public'
+maybe chmod 0600 './NetworkManager/system-connections/Auto quadriga'
 maybe chmod 0600 './NetworkManager/system-connections/Auto subaro'
 maybe chmod 0600 './NetworkManager/system-connections/Auto UNETZ'
 maybe chmod 0600 './NetworkManager/system-connections/Auto VGV75192AB592'
