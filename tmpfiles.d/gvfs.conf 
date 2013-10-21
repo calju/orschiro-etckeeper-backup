@@ -1,0 +1,16 @@
+#
+# The FUSE mount(s) /run/user/*/gvfs are inaccessible to root and thereby
+# cause systemd-tmpfiles --clean to spit an error to the system log upon
+# it trying to stat these directories.
+#
+# While this FUSE behaviour might be considered a FUSE problem, solve this
+# for now by telling systemd-tmpfiles to just stay out of /run/user/*.
+#
+# Note that more specifically telling it to stay out of /run/user/*/gvfs
+# does not help since it'll still stat those directories when traversing
+# /run/user/*.
+#
+# https://bugs.archlinux.org/task/32715
+#
+
+x /run/user/*
