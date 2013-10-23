@@ -1,6 +1,12 @@
 # /etc/mail.rc
 # Configuration file for Mail(1)
 
+# Slightly more "BSDish" behaviour: traditional flag display in the header
+# summary; *bsdannounce* prints a header summary on folder change and thus
+# complements *header* on a per-folder basis; it is meaningless unless
+# *header* is set (which it is by default)
+set bsdflags bsdannounce
+
 # Do not forward to mbox by default since this is likely to be
 # irritating for most users today.
 set hold
