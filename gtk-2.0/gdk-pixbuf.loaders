@@ -74,6 +74,13 @@
 " <svg" "*    " 100
 " <!DOCTYPE svg" "*             " 100
 
+"/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xcf.so"
+"xcf" 0 "gdk-pixbuf" "The XCF (The Gimp) image format" "LGPL"
+"image/x-xcf" "image/x-compressed-xcf" ""
+"xcf" "xcf.bz2" ""
+"gimp xcf" "" 100
+"BZh" "" 80
+
 "/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-qtif.so"
 "qtif" 4 "gdk-pixbuf" "The QTIF image format" "LGPL"
 "image/x-quicktime" "image/qtif" ""
@@ -86,6 +93,12 @@
 "image/x-cmu-raster" "image/x-sun-raster" ""
 "ras" ""
 "Y\246j\225" "" 100
+
+"/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-psd.so"
+"psd" 0 "gdk-pixbuf" "Adobe Photoshop format" "LGPL"
+"image/x-psd" ""
+"psd" ""
+"8BPS" "" 100
 
 "/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-icns.so"
 "icns" 4 "gdk-pixbuf" "The ICNS image format" "GPL"
