@@ -1,7 +1,0 @@
-.include /usr/lib/systemd/system/dropbox@.service
-[Service]
-Environment=DISPLAY=:0
-
-[Unit]
-Requires=graphical.target
-After=graphical.target

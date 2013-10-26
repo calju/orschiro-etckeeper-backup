@@ -1,5 +1,6 @@
 [Unit]
 Description=Run powersaving script in X
+Requires=graphical.target
 After=graphical.target
 
 [Service]

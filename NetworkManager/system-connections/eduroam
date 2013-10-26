@@ -3,7 +3,7 @@ method=auto
 
 [connection]
 id=eduroam
-uuid=04b3648f-c32c-4dc9-a149-5d1e9f39e595
+uuid=6c11bd55-1304-4778-b29f-3bc53b3be408
 type=802-11-wireless
 
 [802-11-wireless]

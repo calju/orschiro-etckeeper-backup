@@ -1,0 +1,16 @@
+#!/bin/sh
+
+INTERFACE=$1 # The interface which is brought up or down
+STATUS=$2 # The new state of the interface
+
+case "$STATUS" in
+    up) # $INTERFACE is up
+        USERS=$(ps -o user --no-headers -C dropbox)
+        killall dropbox
+        for user in $USERS; do
+            su -c "$DISPLAY dropboxd &" $user
+        done
+        ;;
+    down) # $INTERFACE is down
+        ;;
+esac
