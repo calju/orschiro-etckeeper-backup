@@ -25,3 +25,4 @@ method=auto
 [802-11-wireless-security]
 key-mgmt=wpa-eap
 auth-alg=open
+psk=!DYXgcu1

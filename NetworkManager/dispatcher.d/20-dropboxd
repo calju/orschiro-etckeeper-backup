@@ -5,11 +5,16 @@ STATUS=$2 # The new state of the interface
 
 case "$STATUS" in
     up) # $INTERFACE is up
-        #USERS=$(ps -o user --no-headers -C dropbox)
-        #killall dropbox
-        #for user in $USERS; do
-        su -c "DISPLAY=:0 dropboxd &" orschiro
-        #done
+        
+        if pidof dropbox; then
+          killall dropbox
+        fi
+        
+        USERS=$(w | awk '/\/X/ {print $1}')
+
+        for user in $USERS; do
+            su -c "DISPLAY=$(w | awk '/\/X/ {print $11}') dropboxd &" $user
+        done
         ;;
     down) # $INTERFACE is down
         ;;
