@@ -1,6 +1,6 @@
 [connection]
-id=UU-visitor
-uuid=95a8182e-58a4-4656-a76d-04cd7c6a6843
+id=Auto UU-visitor
+uuid=fc4c7a20-add5-4a0a-b2b6-ba084adfb250
 type=802-11-wireless
 
 [802-11-wireless]

@@ -3,7 +3,7 @@ method=auto
 
 [connection]
 id=eduroam
-uuid=6c11bd55-1304-4778-b29f-3bc53b3be408
+uuid=a2b37121-3193-45bb-a5e7-ae84890c143c
 type=802-11-wireless
 
 [802-11-wireless]
@@ -15,7 +15,6 @@ security=802-11-wireless-security
 [802-1x]
 eap=peap;
 identity=4127919@soliscom.uu.nl
-ca-cert=/home/orschiro/.eduroam/AddTrustExternalCARoot.crt
 phase2-auth=mschapv2
 password-flags=1
 system-ca-certs=true

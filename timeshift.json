@@ -1,0 +1,18 @@
+{
+  "backup_device_uuid" : "469ca819-9b4d-48d1-b9f9-7377f47ff722",
+  "is_scheduled" : "true",
+  "schedule_monthly" : "false",
+  "schedule_weekly" : "false",
+  "schedule_daily" : "true",
+  "schedule_hourly" : "false",
+  "schedule_boot" : "true",
+  "count_monthly" : "2",
+  "count_weekly" : "3",
+  "count_daily" : "5",
+  "count_hourly" : "6",
+  "count_boot" : "5",
+  "max_days" : "200",
+  "min_space" : "2048",
+  "exclude" : [
+  ]
+}
