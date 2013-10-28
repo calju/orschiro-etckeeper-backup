@@ -125,9 +125,7 @@ load-module module-suspend-on-idle
 ### If autoexit on idle is enabled we want to make sure we only quit
 ### when no local session needs us anymore.
 .ifexists module-console-kit.so
-.nofail
 load-module module-console-kit
-.fail
 .endif
 .ifexists module-systemd-login.so
 load-module module-systemd-login
@@ -145,11 +143,6 @@ load-module module-role-cork
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
-
-### Load DBus protocol
-.ifexists module-dbus-protocol.so
-load-module module-dbus-protocol
-.endif
 
 # X11 modules should not be started from default.pa so that one daemon
 # can be shared by multiple sessions.
