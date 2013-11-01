@@ -6,18 +6,15 @@ STATUS=$2 # The new state of the interface
 case "$STATUS" in
     up) # $INTERFACE is up
         
-        # if pidof dropbox; then
-        #   killall dropbox
-        # fi
+        if pidof dropbox; then
+          killall dropbox
+        fi
         
         USERS=$(w | awk '/\/X/ {print $1}')
 
-        #for user in $USERS; do
-            # su -c "DISPLAY=$(w | awk '/\/X/ {print $11}') dropboxd &" $USERS &
-            # sleep 5
-            su -c "DISPLAY=:0 dropboxd &" orschiro
-            while pgrep -u root dropbox > /dev/null; do sleep 10; done
-        #done
+        for user in $USERS; do
+          su -c "DISPLAY=$(w | awk '/\/X/ {print $11}') dropboxd &" $user
+        done
         ;;
     down) # $INTERFACE is down
         ;;
