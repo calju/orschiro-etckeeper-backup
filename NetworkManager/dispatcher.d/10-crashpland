@@ -2,9 +2,8 @@
 
 case "$2" in
   up)
-    systemctl restart crashplan
+    systemctl restart crashplan.service
   ;;
   down)
-    systemctl stop crashplan  
   ;;
 esac

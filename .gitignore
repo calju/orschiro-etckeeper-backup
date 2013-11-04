@@ -23,7 +23,6 @@ mtab.fuselock
 network/run
 adjtime
 lvm/cache
-lvm/backup
 lvm/archive
 X11/xdm/authdir/authfiles/*
 ntp.conf.dhcp
