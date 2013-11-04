@@ -1,1 +1,1 @@
-/usr/lib/systemd/system/NetworkManager-dispatcher.service
+/etc/systemd/system/NetworkManager-dispatcher.service

@@ -1,21 +1,20 @@
 #!/bin/bash
 
-INTERFACE=$1 # The interface which is brought up or down
-STATUS=$2 # The new state of the interface
+case "$2" in
+  up) # $INTERFACE is up
+    
+    # if pidof dropbox; then
+    #   killall dropbox
+    # fi
+    
+    # USERS=$(w | awk '/\/X/ {print $1}')
 
-case "$STATUS" in
-    up) # $INTERFACE is up
-        
-        if pidof dropbox; then
-          killall dropbox
-        fi
-        
-        USERS=$(w | awk '/\/X/ {print $1}')
-
-        for user in $USERS; do
-          su -c "DISPLAY=$(w | awk '/\/X/ {print $11}') dropboxd &" $user
-        done
-        ;;
-    down) # $INTERFACE is down
-        ;;
+    # for user in $USERS; do
+    #   su -c "DISPLAY=$(w | awk '/\/X/ {print $11}') dropboxd &" $user
+    # done
+    su -c "DISPLAY=:0 dropboxd &" orschiro &
+  ;;
+  down) # $INTERFACE is down
+    killall dropbox
+  ;;
 esac

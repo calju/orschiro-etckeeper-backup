@@ -1,10 +1,10 @@
 #!/bin/bash
 
 case "$2" in
-        up)
-			
-			systemctl restart crashplan.service
-        ;;
-        down)
-        ;;
+  up)
+    systemctl restart crashplan
+  ;;
+  down)
+    systemctl stop crashplan  
+  ;;
 esac

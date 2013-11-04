@@ -3,7 +3,6 @@
 Section "InputClass"
         Identifier "system-keyboard"
         MatchIsKeyboard "on"
-        Option "XkbLayout" "us,de"
-        Option "XkbModel" "pc104"
-        Option "XkbVariant" "grp:alt_shift_toggle"
+        Option "XkbLayout" "us,de,pl"
+        Option "XkbVariant" ",,"
 EndSection

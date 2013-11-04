@@ -25,3 +25,7 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+# Setting collation
+# https://wiki.archlinux.org/index.php/locale
+export LC_ALL=
