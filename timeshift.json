@@ -1,6 +1,6 @@
 {
   "backup_device_uuid" : "469ca819-9b4d-48d1-b9f9-7377f47ff722",
-  "is_scheduled" : "true",
+  "is_scheduled" : "false",
   "schedule_monthly" : "false",
   "schedule_weekly" : "false",
   "schedule_daily" : "true",
