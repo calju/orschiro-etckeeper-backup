@@ -14,3 +14,5 @@ git:x:999:997:git daemon user:/:/bin/bash
 ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
 rtkit:x:133:133:RealtimeKit:/proc:/sbin/nologin
 usbmux:x:140:140:usbmux user:/:/sbin/nologin
+test:x:1001:100::/home/test:/bin/bash
+orschiro2:x:1002:100::/home/orschiro2:/bin/bash
