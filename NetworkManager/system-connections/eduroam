@@ -1,25 +1,21 @@
-[ipv6]
-method=dhcp
-
 [connection]
 id=eduroam
-uuid=6fdfbd43-746b-4beb-9fbc-db9a3ef272bf
+uuid=ec9c4081-dedf-4100-b71f-e3778a166da8
 type=802-11-wireless
-permissions=user:orschiro:;
-timestamp=1384439991
-
-[802-11-wireless-security]
-key-mgmt=wpa-eap
-wep-key-flags=1
-psk-flags=1
-leap-password-flags=1
 
 [802-11-wireless]
 ssid=eduroam
 mode=infrastructure
-mac-address=00:16:EA:EF:90:62
-seen-bssids=00:1A:1E:15:85:20;D8:C7:C8:6B:57:DA;00:1A:1E:1E:A5:70;D8:C7:C8:6B:57:D2;00:1A:1E:15:7E:E0;D8:C7:C8:D6:F0:21;00:1A:1E:15:85:30;00:1A:1E:15:7E:F0;D8:C7:C8:6B:52:AA;
 security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-eap
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto
 
 [802-1x]
 eap=peap;
@@ -27,9 +23,4 @@ identity=4127919@soliscom.uu.nl
 ca-cert=/home/orschiro/.eduroam/AddTrustExternalCARoot.crt
 phase2-auth=mschapv2
 password-flags=1
-password-raw-flags=1
-pin-flags=1
 system-ca-certs=true
-
-[ipv4]
-method=auto

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="typing_break">
+				</dir>
+				<dir name="thumbnailers">
+				</dir>
+				<dir name="thumbnail_cache">
+				</dir>
+				<dir name="sound">
+				</dir>
+				<dir name="peripherals">
+					<dir name="mouse">
+					</dir>
+					<dir name="keyboard">
+					</dir>
+				</dir>
+				<dir name="lockdown">
+				</dir>
+				<dir name="interface">
+				</dir>
+				<dir name="file-views">
+				</dir>
+				<dir name="background">
+				</dir>
+				<dir name="applications">
+					<dir name="window_manager">
+					</dir>
+					<dir name="terminal">
+					</dir>
+					<dir name="tasks">
+					</dir>
+					<dir name="calendar">
+					</dir>
+					<dir name="browser">
+					</dir>
+					<dir name="at">
+						<dir name="visual">
+						</dir>
+						<dir name="mobility">
+						</dir>
+					</dir>
+				</dir>
+				<dir name="accessibility">
+					<dir name="startup">
+					</dir>
+					<dir name="keyboard">
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="desktop">
+		<dir name="gnome">
+			<dir name="typing_break">
+			</dir>
+			<dir name="thumbnailers">
+			</dir>
+			<dir name="thumbnail_cache">
+			</dir>
+			<dir name="sound">
+			</dir>
+			<dir name="peripherals">
+				<dir name="mouse">
+				</dir>
+				<dir name="keyboard">
+				</dir>
+			</dir>
+			<dir name="lockdown">
+			</dir>
+			<dir name="interface">
+			</dir>
+			<dir name="file_views">
+			</dir>
+			<dir name="background">
+			</dir>
+			<dir name="applications">
+				<dir name="window_manager">
+				</dir>
+				<dir name="terminal">
+				</dir>
+				<dir name="tasks">
+				</dir>
+				<dir name="calendar">
+				</dir>
+				<dir name="browser">
+				</dir>
+				<dir name="at">
+					<dir name="visual">
+					</dir>
+					<dir name="mobility">
+					</dir>
+				</dir>
+			</dir>
+			<dir name="accessibility">
+				<dir name="startup">
+				</dir>
+				<dir name="keyboard">
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>
