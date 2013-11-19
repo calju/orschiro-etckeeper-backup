@@ -3,8 +3,7 @@ id=UU-visitor
 uuid=fc4c7a20-add5-4a0a-b2b6-ba084adfb250
 type=802-11-wireless
 permissions=user:orschiro:;
-autoconnect=false
-timestamp=1384860760
+timestamp=1384868599
 
 [802-11-wireless]
 ssid=UU-visitor
