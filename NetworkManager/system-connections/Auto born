@@ -1,17 +1,18 @@
 [connection]
-id=Auto born
+id=born
 uuid=8cb13749-c86b-4542-bd30-f6550df67977
 type=802-11-wireless
+timestamp=1385046255
 
 [802-11-wireless]
 ssid=born
 mode=infrastructure
 mac-address=00:16:EA:EF:90:62
+seen-bssids=08:ED:B9:73:6F:BB;
 security=802-11-wireless-security
 
 [802-11-wireless-security]
 key-mgmt=wpa-psk
-auth-alg=open
 psk=marijkewoonthier
 
 [ipv4]
