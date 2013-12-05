@@ -1,11 +1,12 @@
 [connection]
 id=eduroam
-uuid=ec9c4081-dedf-4100-b71f-e3778a166da8
+uuid=5139fd4e-75f4-4008-99b8-9c3b0a93021b
 type=802-11-wireless
 
 [802-11-wireless]
 ssid=eduroam
 mode=infrastructure
+mac-address=00:16:EA:EF:90:62
 security=802-11-wireless-security
 
 [802-11-wireless-security]
