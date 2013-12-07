@@ -18,7 +18,7 @@ set -e
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
 prefix="/usr"
-exec_prefix="${prefix}"
+exec_prefix="/usr"
 datarootdir="/usr/share"
 
 export TEXTDOMAIN=grub
@@ -112,6 +112,18 @@ for OS in ${OSPROBED} ; do
   LONGNAME="`echo ${OS} | cut -d ':' -f 2 | tr '^' ' '`"
   LABEL="`echo ${OS} | cut -d ':' -f 3 | tr '^' ' '`"
   BOOT="`echo ${OS} | cut -d ':' -f 4`"
+  UUID="`grub-probe --target=fs_uuid --device ${DEVICE%@*}`"
+  EXPUUID="$UUID"
+
+  if [ x"${DEVICE#*@}" != x ] ; then
+      EXPUUID="${EXPUUID}@${DEVICE#*@}"
+  fi
+
+  if [ "x${GRUB_OS_PROBER_SKIP_LIST}" != "x" -a "x`echo ${GRUB_OS_PROBER_SKIP_LIST} | grep -i -e '\b'${EXPUUID}'\b'`" != "x" ] ; then
+    echo "Skipped ${LONGNAME} on ${DEVICE} by user request." >&2
+    continue
+  fi
+
   BTRFS="`echo ${OS} | cut -d ':' -f 5`"
   if [ "x$BTRFS" = "xbtrfs" ]; then
 	BTRFSuuid="`echo ${OS} | cut -d ':' -f 6`"
@@ -133,6 +145,12 @@ menuentry '$(echo "${LONGNAME} $onstr" | grub_quote)' --class windows --class os
 EOF
       save_default_entry | grub_add_tab
       prepare_grub_to_access_device ${DEVICE} | grub_add_tab
+
+      if [ x"`${grub_probe} --device ${DEVICE} --target=partmap`" = xmsdos ]; then
+	  cat << EOF
+	parttool \${root} hidden-
+EOF
+      fi
 
       case ${LONGNAME} in
 	Windows\ Vista*|Windows\ 7*|Windows\ Server\ 2008*)
@@ -173,7 +191,7 @@ EOF
       fi
       prepare_boot_cache=
       boot_device_id=
-      is_first_entry=true
+      is_top_level=true
       title_correction_code=
       OS="${LONGNAME}"
 
@@ -209,7 +227,7 @@ EOF
 	  prepare_boot_cache="$(prepare_grub_to_access_device ${LBOOT} | grub_add_tab)"
 	fi
 
-	if [ "x$is_first_entry" = xtrue ]; then
+	if [ "x$is_top_level" = xtrue ] && [ "x${GRUB_DISABLE_SUBMENU}" != xy ]; then
             cat << EOF
 menuentry '$(echo "$OS $onstr" | grub_quote)' --class gnu-linux --class gnu --class os \$menuentry_id_option 'osprober-gnulinux-simple-$boot_device_id' {
 EOF
@@ -227,7 +245,7 @@ EOF
 }
 EOF
 	    echo "submenu '$(gettext_printf "Advanced options for %s" "${OS} $onstr" | grub_quote)' \$menuentry_id_option 'osprober-gnulinux-advanced-$boot_device_id' {"
-	    is_first_entry=false
+	    is_top_level=false
 	fi
 	title="${LLABEL} $onstr"
         cat << EOF
@@ -253,13 +271,13 @@ EOF
 	    grub_warn "$(gettext_printf "Please don't use old title \`%s' for GRUB_DEFAULT, use \`%s' (for versions before 2.00) or \`%s' (for 2.00 or later)" "$GRUB_ACTUAL_DEFAULT" "$replacement_title" "gnulinux-advanced-$boot_device_id>gnulinux-$version-$type-$boot_device_id")"
 	fi
       done
-      if [ x"$is_first_entry" != xtrue ]; then
+      if [ x"$is_top_level" != xtrue ]; then
 	  echo '}'
       fi
       echo "$title_correction_code"
     ;;
     macosx)
-      OSXUUID="`${grub_probe} --target=fs_uuid --device ${DEVICE} 2> /dev/null`"
+      OSXUUID="${UUID}"
       osx_entry xnu_kernel 32
       osx_entry xnu_kernel64 64
     ;;
@@ -286,6 +304,17 @@ EOF
 			--exec-server-task='\${exec-task}' -T typed '\${root}' \\
 			'\$(task-create)' '\$(task-resume)'
 	module /lib/ld.so.1 exec /hurd/exec '\$(exec-task=task-create)'
+}
+EOF
+    ;;
+    minix)
+	  cat << EOF
+menuentry "${LONGNAME} (on ${DEVICE}, Multiboot)" {
+EOF
+         save_default_entry | sed -e "s/^/\t/"
+         prepare_grub_to_access_device ${DEVICE} | sed -e "s/^/\t/"
+	 cat << EOF
+	multiboot /boot/image_latest
 }
 EOF
     ;;

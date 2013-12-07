@@ -18,7 +18,7 @@ set -e
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
 prefix="/usr"
-exec_prefix="${prefix}"
+exec_prefix="/usr"
 datarootdir="/usr/share"
 grub_lang=`echo $LANG | cut -d . -f 1`
 
@@ -199,7 +199,7 @@ EOF
 EOF
 
 # Gettext variables and module
-if [ "x${LANG}" != "xC" ] ; then
+if [ "x${LANG}" != "xC" ] &&  [ "x${LANG}" != "x" ]; then
   cat << EOF
   set locale_dir=\$prefix/locale
   set lang=${grub_lang}
