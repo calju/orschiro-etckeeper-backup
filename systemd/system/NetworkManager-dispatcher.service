@@ -1,3 +1,0 @@
-.include /usr/lib/systemd/system/NetworkManager-dispatcher.service
-[Service]
-RemainAfterExit=yes
