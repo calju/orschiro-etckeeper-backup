@@ -37,3 +37,4 @@ vboxusers:!::orschiro
 git:!::
 ntp:!::
 polkitd:!::
+rtkit:!::
