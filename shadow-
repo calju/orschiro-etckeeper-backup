@@ -13,5 +13,5 @@ transmission:!:15654:0:99999:7:::
 orschiro:$6$1M3IJvF4$sP6sXOMKOdgQAGPz2eBlnJ.NxtecOZ8mrFVNKvFzQvl3rlvN3cvFxW1cDx5qqtVDgc5AWEfvVNwCQPAHJIGaY1:15654:0:99999:7:::
 git:!:15682::::::
 ntp:!:15395:0:99999:7:::
-rtkit:!:16035:0:99999:7:::
-test:$6$Prf2sAof$gpzZcWeXmBt4ZjQHcRviRYfOzjA7RcIcsFoO/q74yaH4HULVbVs1VhaX5CR/8OWS6WbIzwIpkJ6kRZzRBJYW3/:16043:0:99999:7:::
+rtkit:!:16053:0:99999:7:::
+usbmux:!:16053:0:99999:7:::
