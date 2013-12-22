@@ -17,6 +17,8 @@ for file in "/etc/X11/Xresources" "$HOME/.Xresources"; do
     if [ -f "$file" ]; then
         echo "Loading resource: $file"
         xrdb -nocpp -merge "$file"
+	# https://wiki.archlinux.org/index.php/LightDM
+        #xrdb -merge "$file"
     fi
 done
 

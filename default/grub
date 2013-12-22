@@ -5,7 +5,7 @@ GRUB_DISTRIBUTOR="Arch"
 #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=1 acpi_osi=Linux pcie_aspm=force i915.lvds_downclock=1 drm.vblankoffdelay=1  i915.semaphores=1 resume=/dev/mapper/VolGroup00-Swap"
 
 # http://wiki.manjaro.org/index.php?title=Talk:Manjaro_-_optimized_power_settings
-GRUB_CMDLINE_LINUX_DEFAULT="pcie_aspm=force acpi_osi=Linux acpi=force acpi_enforce_resources=lax i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 nmi_watchdog=0 zswap.enabled=1 resume=/dev/mapper/VolGroup00-Swap"
+GRUB_CMDLINE_LINUX="pcie_aspm=force acpi_osi=Linux acpi=force acpi_enforce_resources=lax i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1 i915.semaphores=1 nmi_watchdog=0 zswap.enabled=1 zswap.compressor=lz4 resume=/dev/mapper/VolGroup00-Swap"
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
@@ -48,3 +48,7 @@ GRUB_DISABLE_RECOVERY=true
 #GRUB_INIT_TUNE="480 440 1"
 
 #GRUB_SAVEDEFAULT="true"
+
+# https://bugs.archlinux.org/task/38041?project=1&cat%5B0%5D=31&string=grub
+# fix broken grub.cfg gen
+GRUB_DISABLE_SUBMENU=y
