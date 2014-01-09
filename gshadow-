@@ -38,3 +38,5 @@ git:!::
 ntp:!::
 polkitd:!::
 lightdm:!::
+rtkit:!::
+usbmux:!::

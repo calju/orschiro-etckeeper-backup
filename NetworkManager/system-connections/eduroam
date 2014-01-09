@@ -13,6 +13,7 @@ security=802-11-wireless-security
 
 [802-11-wireless-security]
 key-mgmt=wpa-eap
+psk=!DYXgcu1
 
 [ipv4]
 method=auto
