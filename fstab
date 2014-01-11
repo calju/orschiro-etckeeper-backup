@@ -2,7 +2,7 @@
 # /etc/fstab: static file system information
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
-#tmpfs	/home/orschiro/.cache	tmpfs	noatime,nodev,nosuid,size=2048M	0	0
+tmpfs	/home/orschiro/.cache	tmpfs	noatime,nodev,nosuid,size=400M	0	0
 
 UUID=469ca819-9b4d-48d1-b9f9-7377f47ff722 / ext4 defaults,noatime 0 1
 UUID=732ac739-0110-4554-b86d-4d7413e89995 none swap defaults 0 0

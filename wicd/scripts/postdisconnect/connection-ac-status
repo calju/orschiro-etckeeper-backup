@@ -1,0 +1,6 @@
+#!/bin/bash
+
+systemctl stop crashplan.service
+systemctl stop insync@orschiro.service
+systemctl stop dropbox@orschiro.service
+
