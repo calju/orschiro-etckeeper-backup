@@ -7,10 +7,12 @@ then
     systemctl stop crashplan.service
     systemctl stop insync@orschiro.service
     systemctl stop dropbox@orschiro.service
+    /usr/bin/ntpd -gq || true
 else
     echo "Laptop is on AC"
     systemctl restart crashplan.service
     systemctl restart insync@orschiro.service
     systemctl restart dropbox@orschiro.service
+    /usr/bin/ntpd -gq || true
 fi
 
