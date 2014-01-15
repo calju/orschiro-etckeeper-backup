@@ -4,15 +4,19 @@
 if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1
 then
     echo "Laptop is on battery"
+    #sleep 5
     systemctl stop crashplan.service
     systemctl stop insync@orschiro.service
     systemctl stop dropbox@orschiro.service
-    /usr/bin/ntpd -gq || true
+    #/usr/bin/ntpd -gq || true
+    systemctl restart ntpd
 else
     echo "Laptop is on AC"
+    #sleep 5
     systemctl restart crashplan.service
     systemctl restart insync@orschiro.service
     systemctl restart dropbox@orschiro.service
-    /usr/bin/ntpd -gq || true
+    #/usr/bin/ntpd -gq || true
+    systemctl restart ntpd
 fi
 
