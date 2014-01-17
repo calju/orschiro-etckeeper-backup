@@ -1,0 +1,7 @@
+. /usr/lib/udev/rules.d/70-wacom.rules
+
+# inputattach
+# Comment out the below line to disable the following error message
+# failed to execute '/usr/sbin/inputattach'
+#SUBSYSTEM=="tty|pnp", KERNEL=="ttyS[0-9]*", ATTRS{id}=="WACf*", RUN+="/usr/sbin/modprobe wacom_w8001", RUN+="/usr/sbin/inputattach --daemon -w8001 /dev/%k"
+
