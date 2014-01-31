@@ -3,7 +3,8 @@ GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Arch"
 
 # http://thinkpad-forum.de/threads/170503-Welche-Kernelparameter-sind-noch-erforderlich-und-n%FCtzlich?p=1715073#post1715073
-GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux zswap.enabled=1 zswap.compressor=lz4 resume=/dev/mapper/VolGroup00-Swap"
+# http://www.cyberciti.biz/faq/linux-kernel-uhhuh-nmi-received-for-unknown-reason-30/
+GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux zswap.enabled=1 zswap.compressor=lz4 resume=/dev/mapper/VolGroup00-Swap nohpet"
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"

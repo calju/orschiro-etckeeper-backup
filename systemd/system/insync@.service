@@ -3,11 +3,12 @@ Description=Insync
 After=local-fs.target network.target
 
 [Service]
+ExecStartPre=/usr/bin/sleep 60
 Environment=DISPLAY=:0
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/usr/bin/insync start
-ExecStop=/usr/bin/insync quit
+Type=simple
+ExecStart=/usr/bin/insync start --synchronous-full
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
 User=%I
 
 [Install]
