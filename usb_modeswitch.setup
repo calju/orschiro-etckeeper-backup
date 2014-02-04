@@ -1,7 +1,7 @@
 #
 # Device and Configuration Reference (UTF-8 encoding used)
 #
-# Last modified: 2013-08-07
+# Last modified: 2013-11-13
 #
 # Collection of configurations for usb_modeswitch, a mode switching
 # tool for controlling flip flop (multiple mode) USB devices
@@ -173,9 +173,15 @@
 # Mostly useful for non-modem devices.
 #
 #
-# * WaitBefore <seconds>    (no command line parameter)
+# * WaitBefore <seconds>     (no command line parameter)
 #
 # Waiting time before taking any action. Helps with some sensitive setups.
+#
+#
+# * NoMBIMCheck <0|1>        (no command line parameter)
+#
+# Disable the check for new MBIM standard devices, which is always done
+# by default.
 #
 #
 #
@@ -2270,19 +2276,6 @@ TargetClass=0xff
 MessageContent="55534243123456780000000000000606f50402527000000000000000000000"
 
 
-########################################################
-# Vodafone/ZTE K3806-Z
-
-DefaultVendor= 0x19d2
-DefaultProduct=0x0013
-
-TargetVendor=  0x19d2
-TargetProduct= 0x0015
-
-MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
-
-NeedResponse=1
-
 ######################################################## 
 # T-Mobile NL (Huawei E352)
 #
@@ -3023,21 +3016,7 @@ NeedResponse=1
 
 
 ########################################################
-# TW-3G HSPA+ 
-#
-# Contributor: Nordic Nurse
-
-DefaultVendor= 0x1c9e 
-DefaultProduct=0x98ff 
-
-TargetVendor=  0x1c9e 
-TargetProduct= 0x9801 
-
-MessageContent="55534243123456780000000080000606f50402527000000000000000000000"
-
-
-########################################################
-# Samsung GT-B1110 
+# Samsung GT-B1110
 #
 # Contributor: Spelroth
 
@@ -3962,7 +3941,6 @@ TargetVendor=  0x12d1
 TargetProduct= 0x1400
 
 MessageContent="55534243123456780000000000000011062000000000000100000000000000"
-CheckMBIM=1
 
 
 ########################################################
@@ -3992,4 +3970,47 @@ TargetProduct= 0x6085
 
 PantechMode=1
 
+
+#######################################################
+# Quanta MobileGenie 4G lte
+#
+# Contributor: Richard Wood
+
+DefaultVendor= 0x0408
+DefaultProduct=0xea43
+
+TargetVendor=  0x0408
+TargetProduct= 0xea47
+
+MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+
+
 ########################################################
+# AVM Fritz!Wlan USB Stick N v2
+#
+# Contributor: merla
+
+DefaultVendor= 0x057c
+DefaultProduct=0x62ff
+
+TargetVendor=  0x057c
+TargetProduct= 0x8501
+
+MessageContent="5553424312345678000000000000061b000000ff0000000000000000000000"
+
+
+########################################################
+# Alcatel-sbell ASB TL131 TD-LTE
+#
+# Contributor: scateu
+
+DefaultVendor= 0x05c6
+DefaultProduct=0x9024
+
+TargetVendor=  0x05c6
+TargetProduct= 0x9025
+
+MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+
+
+#######################################################
