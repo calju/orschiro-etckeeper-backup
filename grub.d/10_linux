@@ -51,13 +51,7 @@ else
   LINUX_ROOT_DEVICE=UUID=${GRUB_DEVICE_UUID}
 fi
 
-GRUBFS="`${grub_probe} --device ${GRUB_DEVICE} --target=fs 2>/dev/null || true`"
-
-if [ x"$GRUBFS" = x ]; then
-    GRUBFS="$(stat -f --printf=%T / || true)"
-fi
-
-case x"$GRUBFS" in
+case x"$GRUB_FS" in
     xbtrfs)
 	rootsubvol="`make_system_path_relative_to_its_root /`"
 	rootsubvol="${rootsubvol#/}"
@@ -87,8 +81,6 @@ linux_entry ()
       case $type in
 	  recovery)
 	      title="$(gettext_printf "%s, with Linux %s (recovery mode)" "${os}" "${version}")" ;;
-	  fallback)
-	      title="$(gettext_printf "%s, with Linux %s (Fallback initramfs)" "${os}" "${version}")" ;;
 	  *)
 	      title="$(gettext_printf "%s, with Linux %s" "${os}" "${version}")" ;;
       esac
@@ -102,7 +94,7 @@ linux_entry ()
   else
       echo "menuentry '$(echo "$os" | grub_quote)' ${CLASS} \$menuentry_id_option 'gnulinux-simple-$boot_device_id' {" | sed "s/^/$submenu_indentation/"
   fi      
-  if [ x$type != xrecovery ] && [ x$type != xfallback ] ; then
+  if [ x$type != xrecovery ] ; then
       save_default_entry | grub_add_tab
   fi
 
@@ -134,8 +126,7 @@ linux_entry ()
     fi
     printf '%s\n' "${prepare_boot_cache}" | sed "s/^/$submenu_indentation/"
   fi
-
-  message="$(gettext_printf "Loading Linux %s ..." "${version}")"
+  message="$(gettext_printf "Loading Linux %s ..." ${version})"
   sed "s/^/$submenu_indentation/" << EOF
 	echo	'$(echo "$message" | grub_quote)'
 	linux	${rel_dirname}/${basename} root=${linux_root_device_thisversion} rw ${args}
@@ -193,22 +184,7 @@ while [ "x$list" != "x" ] ; do
   alt_version=`echo $version | sed -e "s,\.old$,,g"`
   linux_root_device_thisversion="${LINUX_ROOT_DEVICE}"
 
-  if test -e "/etc/arch-release" ; then
-    if echo "${basename}" | grep -q 'vmlinuz-linux' ; then
-      version="`echo "${basename}" | sed -e 's,vmlinuz-linux,,g'`"
-      
-      if [ "x${version}" = "x" ] ; then
-        version="core repo kernel"
-      else
-        version="`echo "${version}" | sed -e 's,-,,g'`"
-        version="${version} kernel"
-      fi
-    fi
-  fi
-  
   initrd=
-  initrd_arch="`echo "${basename}" | sed -e 's,vmlinuz,initramfs,g'`"
-
   for i in "initrd.img-${version}" "initrd-${version}.img" "initrd-${version}.gz" \
 	   "initrd-${version}" "initramfs-${version}.img" \
 	   "initrd.img-${alt_version}" "initrd-${alt_version}.img" \
@@ -216,8 +192,7 @@ while [ "x$list" != "x" ] ; do
 	   "initramfs-genkernel-${version}" \
 	   "initramfs-genkernel-${alt_version}" \
 	   "initramfs-genkernel-${GENKERNEL_ARCH}-${version}" \
-	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}" \
-	   "${initrd_arch}.img" ; do
+	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}"; do
     if test -e "${dirname}/${i}" ; then
       initrd="$i"
       break
@@ -245,22 +220,6 @@ while [ "x$list" != "x" ] ; do
     linux_root_device_thisversion=${GRUB_DEVICE}
   fi
 
-  if test -e "/etc/arch-release" ; then
-    is_first_entry="false"
-    
-    linux_entry "${OS}" "${version}" true \
-              "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
-    
-    for i in "${initrd_arch}-fallback.img" "initramfs-${version}-fallback.img" ; do
-      if test -e "${dirname}/${i}" ; then
-        initrd="${i}"
-        linux_entry "${OS}" "${version}" fallback \
-                    "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
-        break
-      fi
-    done
-  fi
-
   if [ "x$is_top_level" = xtrue ] && [ "x${GRUB_DISABLE_SUBMENU}" != xy ]; then
     linux_entry "${OS}" "${version}" simple \
     "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
@@ -275,11 +234,8 @@ while [ "x$list" != "x" ] ; do
     is_top_level=false
   fi
 
-  if ! test -e "/etc/arch-release" ; then
   linux_entry "${OS}" "${version}" advanced \
               "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
-  fi
-
   if [ "x${GRUB_DISABLE_RECOVERY}" != "xtrue" ]; then
     linux_entry "${OS}" "${version}" recovery \
                 "single ${GRUB_CMDLINE_LINUX}"
@@ -290,10 +246,8 @@ done
 
 # If at least one kernel was found, then we need to
 # add a closing '}' for the submenu command.
-if ! test -e "/etc/arch-release" ; then
 if [ x"$is_top_level" != xtrue ]; then
   echo '}'
-fi
 fi
 
 echo "$title_correction_code"
