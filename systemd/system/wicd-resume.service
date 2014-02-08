@@ -1,0 +1,11 @@
+[Unit]
+Description=Local system resume actions
+After=suspend.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/systemctl restart wicd
+
+[Install]
+WantedBy=suspend.target
