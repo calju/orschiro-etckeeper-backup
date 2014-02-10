@@ -5,8 +5,8 @@ After=suspend.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=/usr/bin/sleep 60
-ExecStart=/usr/bin/systemctl restart wicd
+ExecStartPre=/usr/bin/pkill wicd
+ExecStart=/usr/bin/wicd
 
 [Install]
 WantedBy=suspend.target
