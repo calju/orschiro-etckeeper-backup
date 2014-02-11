@@ -4,9 +4,10 @@ After=suspend.target
 
 [Service]
 Type=oneshot
+User=%i
 RemainAfterExit=yes
-ExecStartPre=/usr/bin/pkill wicd
-ExecStart=/usr/bin/wicd
+ExecStartPre=/usr/share/wicd/daemon/suspend.py
+ExecStart=/usr/share/wicd/daemon/autoconnect.py
 
 [Install]
 WantedBy=suspend.target
