@@ -39,4 +39,3 @@ ntp:x:87:
 polkitd:x:102:
 lightdm:x:620:
 rtkit:x:133:
-usbmux:x:140:
