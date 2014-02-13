@@ -1,7 +1,0 @@
-# SpaceFM As-Root Session File
-
-# THIS FILE IS NOT DESIGNED TO BE EDITED
-
-
-main_terminal-s=urxvt
-main_terminal-b=2
