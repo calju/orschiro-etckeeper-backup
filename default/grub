@@ -4,7 +4,8 @@ GRUB_DISTRIBUTOR="Arch"
 
 # http://thinkpad-forum.de/threads/170503-Welche-Kernelparameter-sind-noch-erforderlich-und-n%FCtzlich?p=1715073#post1715073
 # http://www.cyberciti.biz/faq/linux-kernel-uhhuh-nmi-received-for-unknown-reason-30/
-GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux zswap.enabled=1 zswap.compressor=lz4 resume=/dev/mapper/VolGroup00-Swap nohpet"
+# https://bbs.archlinux.org/viewtopic.php?pid=1069691#p1069691
+GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux zswap.enabled=1 zswap.compressor=lz4 resume=/dev/mapper/VolGroup00-Swap nohpet loglevel=3"
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
