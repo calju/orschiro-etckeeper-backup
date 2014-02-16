@@ -87,7 +87,7 @@
   <delegate decode="html" command="&quot;html2ps&quot; -U -o &quot;%o&quot; &quot;%i&quot;"/>
   <delegate decode="https" command="&quot;curl&quot; -s -k -L -o &quot;%o&quot; &quot;https:%M&quot;"/>
   <delegate decode="ilbm" command="&quot;ilbmtoppm&quot; &quot;%i&quot; &gt; &quot;%o&quot;"/>
-  <delegate decode="jxr" command="mv &quot;%i&quot; &quot;%i.jxr&quot;; &quot;JxrDecApp&quot; -i &quot;%i.jxr&quot; -o &quot;%o.pnm&quot;; mv &quot;%i.jxr&quot; &quot;%i&quot;; mv &quot;%o.pnm&quot; &quot;%o&quot;"/>
+  <delegate decode="jxr" command="mv &quot;%i&quot; &quot;%i.jxr&quot;; &quot;JxrDecApp&quot; -i &quot;%i.jxr&quot; -o &quot;%o.bmp&quot; -c 0; mv &quot;%i.jxr&quot; &quot;%i&quot;; mv &quot;%o.bmp&quot; &quot;%o&quot;"/>
   <delegate decode="man" command="&quot;groff&quot; -man -Tps &quot;%i&quot; &gt; &quot;%o&quot;"/>
   <delegate decode="miff" encode="show" spawn="True" command="&quot;display&quot; -delay 0 -window-group %[group] -title &quot;%l &quot; &quot;ephemeral:%i&quot;"/>
   <delegate decode="miff" encode="win" stealth="True" spawn="True" command="&quot;display&quot; -immutable -delay 0 -window-group %[group] -title &quot;%l &quot; &quot;ephemeral:%i&quot;"/>
