@@ -1,0 +1,10 @@
+# Determining if on AC or battery
+if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1
+then
+    echo "Laptop is on battery"
+    ExecUpPost="systemctl stop crashplan.service; systemctl stop insync@orschiro.service; systemctl stop dropbox@orschiro.service; systemctl restart ntpd"
+else
+    echo "Laptop is on AC"
+    ExecUpPost="systemctl restart crashplan.service; systemctl restart insync@orschiro.service; systemctl restart dropbox@orschiro.service; systemctl restart ntpd"
+fi
+

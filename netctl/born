@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=born
+IP=dhcp
+Key=5e1720c3cbe321786cbd8660f94451f76982610aa95c89e9d3e13bd5a56377bf

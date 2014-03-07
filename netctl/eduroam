@@ -1,0 +1,14 @@
+Description='Eduroam-profile for r.orzanna@students.uu.nl'
+Interface=wls1
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+ 'ssid="eduroam"'
+ 'proto=RSN WPA'
+ 'key_mgmt=WPA-EAP'
+ 'auth_alg=OPEN'
+ 'eap=PEAP'
+ 'identity="4127919@soliscom.uu.nl"'
+ 'password="!DYXgcu1"'
+)
