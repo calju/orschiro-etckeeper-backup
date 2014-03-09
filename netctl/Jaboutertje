@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=Jaboutertje
+IP=dhcp
+Key=383c3a3bf530fef02b35d31aeb3e318199d20997b54471c500fd42f8d6f18364
