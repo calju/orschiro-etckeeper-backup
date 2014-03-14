@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=ThomsonE6490C
+IP=dhcp
+Key=aaeb5d0ef64909d47243f11f8bf45ab04f0113c5600a7c22dbdfdbf3d9bb5037
