@@ -1,0 +1,5 @@
+# Logitech R400 presenter with lirc
+# http://linux.bplaced.net/#fernbedienung
+
+SUBSYSTEM=="input", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52d", SYMLINK="input/ir"
+
