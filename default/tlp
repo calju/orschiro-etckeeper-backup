@@ -111,7 +111,9 @@ WOL_DISABLE=Y
 
 # Enable audio power saving for Intel HDA, AC97 devices (timeout in secs).
 # A value of 0 disables / >=1 enables power save.
-SOUND_POWER_SAVE=1
+SOUND_POWER_SAVE_ON_AC=0
+SOUND_POWER_SAVE_ON_BAT=1
+
 # Disable controller too (HDA only): Y/N
 SOUND_POWER_SAVE_CONTROLLER=Y
 
@@ -183,7 +185,7 @@ RESTORE_DEVICE_STATE_ON_STARTUP=0
 # Charging starts when the remaining capacity falls below the START_CHARGE_TRESH
 # value and stops when exceeding the STOP_CHARGE_TRESH value.
 # Main battery (values in %)
-START_CHARGE_THRESH_BAT0=50
+START_CHARGE_THRESH_BAT0=75
 STOP_CHARGE_THRESH_BAT0=80
 # Ultrabay or slice battery (values in %)
 #START_CHARGE_THRESH_BAT1=75
