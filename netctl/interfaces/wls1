@@ -1,0 +1,2 @@
+ForceConnect=yes
+DHCPClient='dhclient'

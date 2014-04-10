@@ -13,5 +13,4 @@ transmission:!:15654:0:99999:7:::
 orschiro:$6$1M3IJvF4$sP6sXOMKOdgQAGPz2eBlnJ.NxtecOZ8mrFVNKvFzQvl3rlvN3cvFxW1cDx5qqtVDgc5AWEfvVNwCQPAHJIGaY1:15654:0:99999:7:::
 git:!:15682::::::
 ntp:!:15395:0:99999:7:::
-rtkit:!:16062:0:99999:7:::
-usbmux:!:16166:0:99999:7:::
+usbmux:!:16169:0:99999:7:::

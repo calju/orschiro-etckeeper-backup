@@ -10,5 +10,5 @@ WPAConfigSection=(
  'auth_alg=OPEN'
  'eap=PEAP'
  'identity="4127919@soliscom.uu.nl"'
- 'password="!DYXgcu1"'
+ 'password=hash:7bd088bf708fcc1d0a1ab08b63f72c12'
 )

@@ -37,4 +37,4 @@ vboxusers:!::orschiro
 git:!::
 ntp:!::
 polkitd:!::
-rtkit:!::
+usbmux:!::
