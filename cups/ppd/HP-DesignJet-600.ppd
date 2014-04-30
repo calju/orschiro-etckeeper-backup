@@ -1,0 +1,228 @@
+*PPD-Adobe: "4.3"
+*%%%% PPD file for DesignJet 600 pcl with CUPS.
+*%%%% Created by the CUPS PPD Compiler CUPS v1.7.2.
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "dsgnjt600pcl.ppd"
+*Product: "(DesignJet 600 pcl)"
+*Manufacturer: "HP"
+*ModelName: "HP DesignJet 600 pcl"
+*ShortNickName: "HP DesignJet 600 pcl"
+*NickName: "HP DesignJet 600 pcl, 1.0"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 1.7
+*cupsModelNumber: 1376257
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-command 50 commandtopclx"
+*cupsFilter: "application/vnd.cups-raster 50 rastertopclx"
+*cupsLanguages: "en"
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: A4
+*PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Tabloid/Tabloid: "<</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*PageSize AnsiC/ANSI C: "<</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*PageSize AnsiD/ANSI D: "<</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*PageSize AnsiE/ANSI E: "<</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHA/Letter Oversize: "<</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHA.Transverse/Letter Oversize Long Edge: "<</PageSize[864 648]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHB/Tabloid Oversize: "<</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHB.Transverse/Tabloid Oversize Long Edge: "<</PageSize[1296 864]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHC/ARCH C: "<</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHC.Transverse/ARCH C Long Edge: "<</PageSize[1728 1296]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHD/ARCH D: "<</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*PageSize ARCHD.Transverse/ARCH D Long Edge: "<</PageSize[2592 1728]/ImagingBBox null>>setpagedevice"
+*PageSize A0D/A0D - 841x4756mm: "<</PageSize[2384 13480]/ImagingBBox null>>setpagedevice"
+*PageSize A0C/A0C - 841x3567mm: "<</PageSize[2384 10110]/ImagingBBox null>>setpagedevice"
+*PageSize A0B/A0B - 841x2378mm: "<</PageSize[2384 6740]/ImagingBBox null>>setpagedevice"
+*PageSize A0/A0: "<</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*PageSize A1/A1: "<</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*PageSize A1.Transverse/A1 Long Edge: "<</PageSize[2384 1684]/ImagingBBox null>>setpagedevice"
+*PageSize A2/A2: "<</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*PageSize A2.Transverse/A2 Long Edge: "<</PageSize[1684 1191]/ImagingBBox null>>setpagedevice"
+*PageSize A3/A3: "<</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*PageSize A3.Transverse/A3 Long Edge: "<</PageSize[1191 842]/ImagingBBox null>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A4.Transverse/A4 Long Edge: "<</PageSize[842 595]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize A5.Transverse/A5 Long Edge: "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: A4
+*PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Tabloid/Tabloid: "<</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*PageRegion AnsiC/ANSI C: "<</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*PageRegion AnsiD/ANSI D: "<</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*PageRegion AnsiE/ANSI E: "<</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHA/Letter Oversize: "<</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHA.Transverse/Letter Oversize Long Edge: "<</PageSize[864 648]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHB/Tabloid Oversize: "<</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHB.Transverse/Tabloid Oversize Long Edge: "<</PageSize[1296 864]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHC/ARCH C: "<</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHC.Transverse/ARCH C Long Edge: "<</PageSize[1728 1296]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHD/ARCH D: "<</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*PageRegion ARCHD.Transverse/ARCH D Long Edge: "<</PageSize[2592 1728]/ImagingBBox null>>setpagedevice"
+*PageRegion A0D/A0D - 841x4756mm: "<</PageSize[2384 13480]/ImagingBBox null>>setpagedevice"
+*PageRegion A0C/A0C - 841x3567mm: "<</PageSize[2384 10110]/ImagingBBox null>>setpagedevice"
+*PageRegion A0B/A0B - 841x2378mm: "<</PageSize[2384 6740]/ImagingBBox null>>setpagedevice"
+*PageRegion A0/A0: "<</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*PageRegion A1/A1: "<</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*PageRegion A1.Transverse/A1 Long Edge: "<</PageSize[2384 1684]/ImagingBBox null>>setpagedevice"
+*PageRegion A2/A2: "<</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*PageRegion A2.Transverse/A2 Long Edge: "<</PageSize[1684 1191]/ImagingBBox null>>setpagedevice"
+*PageRegion A3/A3: "<</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*PageRegion A3.Transverse/A3 Long Edge: "<</PageSize[1191 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A4.Transverse/A4 Long Edge: "<</PageSize[842 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A5.Transverse/A5 Long Edge: "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: A4
+*ImageableArea Letter/US Letter: "14.39999961853 28.799999237061 597.599975585938 763.200012207031"
+*ImageableArea Tabloid/Tabloid: "14.39999961853 28.799999237061 777.599975585938 1195.199951171875"
+*ImageableArea AnsiC/ANSI C: "14.39999961853 28.799999237061 1209.599975585938 1555.199951171875"
+*ImageableArea AnsiD/ANSI D: "14.39999961853 28.799999237061 1569.599975585938 2419.199951171875"
+*ImageableArea AnsiE/ANSI E: "14.39999961853 28.799999237061 2433.60009765625 3139.199951171875"
+*ImageableArea ARCHA/Letter Oversize: "14.39999961853 28.799999237061 633.599975585938 835.200012207031"
+*ImageableArea ARCHA.Transverse/Letter Oversize Long Edge: "14.39999961853 28.799999237061 849.599975585938 619.200012207031"
+*ImageableArea ARCHB/Tabloid Oversize: "14.39999961853 28.799999237061 849.599975585938 1267.199951171875"
+*ImageableArea ARCHB.Transverse/Tabloid Oversize Long Edge: "14.39999961853 28.799999237061 1281.599975585938 835.200012207031"
+*ImageableArea ARCHC/ARCH C: "14.39999961853 28.799999237061 1281.599975585938 1699.199951171875"
+*ImageableArea ARCHC.Transverse/ARCH C Long Edge: "14.39999961853 28.799999237061 1713.599975585938 1267.199951171875"
+*ImageableArea ARCHD/ARCH D: "14.39999961853 28.799999237061 1713.599975585938 2563.199951171875"
+*ImageableArea ARCHD.Transverse/ARCH D Long Edge: "14.39999961853 28.799999237061 2577.60009765625 1699.199951171875"
+*ImageableArea A0D/A0D - 841x4756mm: "14.39999961853 28.799999237061 2369.60009765625 13451.2001953125"
+*ImageableArea A0C/A0C - 841x3567mm: "14.39999961853 28.799999237061 2369.60009765625 10081.2001953125"
+*ImageableArea A0B/A0B - 841x2378mm: "14.39999961853 28.799999237061 2369.60009765625 6711.2001953125"
+*ImageableArea A0/A0: "14.39999961853 28.799999237061 2369.60009765625 3341.199951171875"
+*ImageableArea A1/A1: "14.39999961853 28.799999237061 1669.599975585938 2355.199951171875"
+*ImageableArea A1.Transverse/A1 Long Edge: "14.39999961853 28.799999237061 2369.60009765625 1655.199951171875"
+*ImageableArea A2/A2: "14.39999961853 28.799999237061 1176.599975585938 1655.199951171875"
+*ImageableArea A2.Transverse/A2 Long Edge: "14.39999961853 28.799999237061 1669.599975585938 1162.199951171875"
+*ImageableArea A3/A3: "14.39999961853 28.799999237061 827.599975585938 1162.199951171875"
+*ImageableArea A3.Transverse/A3 Long Edge: "14.39999961853 28.799999237061 1176.599975585938 813.200012207031"
+*ImageableArea A4/A4: "14.39999961853 28.799999237061 580.599975585938 813.200012207031"
+*ImageableArea A4.Transverse/A4 Long Edge: "14.39999961853 28.799999237061 827.599975585938 566.200012207031"
+*ImageableArea A5/A5: "14.39999961853 28.799999237061 405.600006103516 566.200012207031"
+*ImageableArea A5.Transverse/A5 Long Edge: "14.39999961853 28.799999237061 580.599975585938 391.200012207031"
+*DefaultPaperDimension: A4
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension Tabloid/Tabloid: "792 1224"
+*PaperDimension AnsiC/ANSI C: "1224 1584"
+*PaperDimension AnsiD/ANSI D: "1584 2448"
+*PaperDimension AnsiE/ANSI E: "2448 3168"
+*PaperDimension ARCHA/Letter Oversize: "648 864"
+*PaperDimension ARCHA.Transverse/Letter Oversize Long Edge: "864 648"
+*PaperDimension ARCHB/Tabloid Oversize: "864 1296"
+*PaperDimension ARCHB.Transverse/Tabloid Oversize Long Edge: "1296 864"
+*PaperDimension ARCHC/ARCH C: "1296 1728"
+*PaperDimension ARCHC.Transverse/ARCH C Long Edge: "1728 1296"
+*PaperDimension ARCHD/ARCH D: "1728 2592"
+*PaperDimension ARCHD.Transverse/ARCH D Long Edge: "2592 1728"
+*PaperDimension A0D/A0D - 841x4756mm: "2384 13480"
+*PaperDimension A0C/A0C - 841x3567mm: "2384 10110"
+*PaperDimension A0B/A0B - 841x2378mm: "2384 6740"
+*PaperDimension A0/A0: "2384 3370"
+*PaperDimension A1/A1: "1684 2384"
+*PaperDimension A1.Transverse/A1 Long Edge: "2384 1684"
+*PaperDimension A2/A2: "1191 1684"
+*PaperDimension A2.Transverse/A2 Long Edge: "1684 1191"
+*PaperDimension A3/A3: "842 1191"
+*PaperDimension A3.Transverse/A3 Long Edge: "1191 842"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A4.Transverse/A4 Long Edge: "842 595"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension A5.Transverse/A5 Long Edge: "595 420"
+*MaxMediaWidth: "3024"
+*MaxMediaHeight: "129600"
+*HWMargins: 14.39999961853 28.799999237061 14.39999961853 28.799999237061
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 200 3024
+*ParamCustomPageSize Height: 2 points 200 129600
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*OpenUI *CutMedia/Cut Media: Boolean
+*OrderDependency: 10 AnySetup *CutMedia
+*DefaultCutMedia: False
+*CutMedia False/False: "<</CutMedia 0>>setpagedevice"
+*CutMedia True/True: "<</CutMedia 4>>setpagedevice"
+*CloseUI: *CutMedia
+*OpenUI *Resolution/Output Resolution: PickOne
+*OrderDependency: 20 AnySetup *Resolution
+*DefaultResolution: 300dpi
+*Resolution 150dpi/150 DPI: "<</HWResolution[150 150]>>setpagedevice"
+*Resolution 300dpi/300 DPI: "<</HWResolution[300 300]>>setpagedevice"
+*Resolution 600dpi/600 DPI: "<</HWResolution[600 600]>>setpagedevice"
+*CloseUI: *Resolution
+*OpenUI *OutputMode/Print Quality: PickOne
+*OrderDependency: 50 AnySetup *OutputMode
+*DefaultOutputMode: Normal
+*OutputMode Draft/Draft: "    <</OutputType (Draft)>>setpagedevice"
+*OutputMode Normal/Normal: " <</OutputType (Normal)>>setpagedevice"
+*OutputMode Best/Best: "      <</OutputType (Best)>>setpagedevice"
+*CloseUI: *OutputMode
+*JCLOpenUI *InputSlot/Mediasource: PickOne
+*OrderDependency: 10 JCLSetup *InputSlot
+*DefaultInputSlot: roll
+*InputSlot manual/Manual: "@PJL SET MEDIASOURCE=MANUALFEED<0A>"
+*InputSlot roll/ROLL: "@PJL SET MEDIASOURCE=ROLL<0A>"
+*CloseUI: *InputSlot
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 10 AnySetup *MediaType
+*DefaultMediaType: Paper
+*MediaType Paper/Plain Paper: "<</MediaType(Paper)/cupsMediaType 0>>setpagedevice"
+*MediaType Transpareny/Tranparency film: "<</MediaType(Transpareny)/cupsMediaType 1>>setpagedevice"
+*MediaType Velum/Velum: "<</MediaType(Velum)/cupsMediaType 2>>setpagedevice"
+*MediaType Polyester/Polyester film: "<</MediaType(Polyester)/cupsMediaType 3>>setpagedevice"
+*MediaType Translucent/Translucent paper: "<</MediaType(Translucent)/cupsMediaType 4>>setpagedevice"
+*MediaType Special/Special paper: "<</MediaType(Special)/cupsMediaType 5>>setpagedevice"
+*MediaType Glossy/Glossy paper: "<</MediaType(Glossy)/cupsMediaType 6>>setpagedevice"
+*CloseUI: *MediaType
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(1.05)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(1.05)" Standard ROM
+*Font AvantGarde-Demi: Standard "(1.05)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(1.05)" Standard ROM
+*Font Bookman-Demi: Standard "(1.05)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(1.05)" Standard ROM
+*Font Bookman-Light: Standard "(1.05)" Standard ROM
+*Font Bookman-LightItalic: Standard "(1.05)" Standard ROM
+*Font Courier: Standard "(1.05)" Standard ROM
+*Font Courier-Bold: Standard "(1.05)" Standard ROM
+*Font Courier-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Courier-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica: Standard "(1.05)" Standard ROM
+*Font Helvetica-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Oblique: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(1.05)" Standard ROM
+*Font Palatino-Bold: Standard "(1.05)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Palatino-Italic: Standard "(1.05)" Standard ROM
+*Font Palatino-Roman: Standard "(1.05)" Standard ROM
+*Font Symbol: Special "(001.005)" Special ROM
+*Font Times-Bold: Standard "(1.05)" Standard ROM
+*Font Times-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Times-Italic: Standard "(1.05)" Standard ROM
+*Font Times-Roman: Standard "(1.05)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
+*Font ZapfDingbats: Special "(001.005)" Special ROM
+*% End of dsgnjt600pcl.ppd, 14374 bytes.
