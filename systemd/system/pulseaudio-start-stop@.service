@@ -1,0 +1,15 @@
+[Unit]
+Description=PulseAudio Sound System
+Before=sound.target
+
+[Service]
+User=%I
+BusName=org.pulseaudio.Server
+ExecStart=/usr/bin/pulseaudio --start 
+ExecStop=/usr/bin/pulseaudio -k
+Restart=never
+RemainAfterExit=yes
+Type=oneshot
+
+[Install]
+WantedBy=xinitrc.target

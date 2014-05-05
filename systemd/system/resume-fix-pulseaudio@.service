@@ -1,0 +1,13 @@
+# https://wiki.archlinux.org/index.php/PulseAudio#No_sound_after_resume_from_suspend
+[Unit]
+Description=Fix PulseAudio after resume from suspend
+After=suspend.target
+
+[Service]
+User=%I
+Type=oneshot
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
+ExecStart=/usr/bin/pasuspender /bin/true
+
+[Install]
+WantedBy=suspend.target
