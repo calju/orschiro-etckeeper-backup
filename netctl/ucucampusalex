@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=Sitecom8DAF24
+IP=dhcp
+Key=\"bde5cf49f453567bceaf72dac7c015e93ebe37da1e09a35c62536e845d23221d

@@ -1,5 +1,6 @@
 [Unit]
-Description=Lock X session using sxlock
+Description=Lock X session using sxlock on hibernation / suspension
+After=suspend.target
 
 [Service]
 User=orschiro
