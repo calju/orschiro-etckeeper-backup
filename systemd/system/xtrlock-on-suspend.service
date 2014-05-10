@@ -4,7 +4,7 @@ Description=Lock X session using xtrlock
 [Service]
 Environment=DISPLAY=:0
 User=orschiro
-ExecStart=/usr/bin/xtrlock -b
+ExecStart=/usr/bin/xtrlock
 
 [Install]
 WantedBy=sleep.target
