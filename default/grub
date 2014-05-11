@@ -4,7 +4,9 @@ GRUB_DISTRIBUTOR="Arch"
 # clocksource=acpi_pm, clocksource=hpet for avoiding fast calibration failed error
 # http://stackoverflow.com/questions/18055593/fast-tsc-calibration-failed
 # Enable zswap: zswap.enabled=1
-GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux video.use_native_backlight=1 zswap.enabled=1 resume=/dev/mapper/VolGroup00-Swap"
+# Disable Linux kernel: Uhhuh. NMI received for unknown reason 30
+# http://www.cyberciti.biz/faq/linux-kernel-uhhuh-nmi-received-for-unknown-reason-30/
+GRUB_CMDLINE_LINUX_DEFAULT="clocksource=acpi_pm acpi_osi=Linux video.use_native_backlight=1 zswap.enabled=1 resume=/dev/mapper/VolGroup00-Swap nmi_watchdog=0 nohpet"
 GRUB_CMDLINE_LINUX="quiet"
 
 # Preload both GPT and MBR modules so that they are not missed
