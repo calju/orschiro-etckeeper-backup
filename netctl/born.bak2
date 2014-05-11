@@ -1,0 +1,10 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=born
+IP=static
+Address=('192.168.178.12/24')
+Gateway='192.168.178.1'
+DNS=('8.8.8.8')
+Key=5e1720c3cbe321786cbd8660f94451f76982610aa95c89e9d3e13bd5a56377bf
