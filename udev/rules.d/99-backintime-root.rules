@@ -1,1 +1,0 @@
-ACTION=="add", ENV{ID_FS_UUID}=="2aac80d3-3f44-41dc-9f99-18f251d518dd", RUN+="/usr/bin/su - 'root' -c 'test -x /usr/bin/anacron && test -e /root/.config/backintime/anacrontab-2aac80d3-3f44-41dc-9f99-18f251d518dd && /usr/bin/anacron -s -t /root/.config/backintime/anacrontab-2aac80d3-3f44-41dc-9f99-18f251d518dd -S /root/.local/share/backintime/anacron' &"
