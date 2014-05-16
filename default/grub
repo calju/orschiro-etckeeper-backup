@@ -6,7 +6,7 @@ GRUB_DISTRIBUTOR="Arch"
 # Enable zswap: zswap.enabled=1
 # Disable Linux kernel: Uhhuh. NMI received for unknown reason 30
 # http://www.cyberciti.biz/faq/linux-kernel-uhhuh-nmi-received-for-unknown-reason-30/
-GRUB_CMDLINE_LINUX_DEFAULT="clocksource=acpi_pm acpi_osi=Linux video.use_native_backlight=1 zswap.enabled=1 resume=/dev/mapper/VolGroup00-Swap nmi_watchdog=0 nohpet"
+GRUB_CMDLINE_LINUX_DEFAULT="clocksource=acpi_pm acpi_osi=Linux video.use_native_backlight=1 acpi_osi='!Windows 2012' acpi_backlight=legacy zswap.enabled=1 resume=/dev/mapper/VolGroup00-Swap nmi_watchdog=0 nohpet"
 GRUB_CMDLINE_LINUX="quiet"
 
 # Preload both GPT and MBR modules so that they are not missed
