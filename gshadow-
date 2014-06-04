@@ -39,3 +39,5 @@ ntp:!::
 polkitd:!::
 rtkit:!::
 avahi:x::
+colord:!::
+systemd-journal-gateway:!::

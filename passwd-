@@ -13,3 +13,5 @@ orschiro:x:1000:100:Robert Orzanna:/home/orschiro:/usr/bin/zsh
 git:x:999:997:git daemon user:/:/bin/bash
 ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
 rtkit:x:133:133:RealtimeKit:/proc:/sbin/nologin
+colord:x:124:124::/var/lib/colord:/bin/false
+systemd-journal-gateway:x:191:191::/:/usr/bin/nologin

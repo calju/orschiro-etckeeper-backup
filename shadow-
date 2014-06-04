@@ -13,3 +13,5 @@ orschiro:$6$1M3IJvF4$sP6sXOMKOdgQAGPz2eBlnJ.NxtecOZ8mrFVNKvFzQvl3rlvN3cvFxW1cDx5
 git:!:15682::::::
 ntp:!:15395:0:99999:7:::
 rtkit:!:16178:0:99999:7:::
+colord:!:16188:0:99999:7:::
+systemd-journal-gateway:!:16225:0:99999:7:::
