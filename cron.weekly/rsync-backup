@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Run dialog
+zenity --question --text "Running rsync backup?" --title "rsync backup"
+if [ $? -eq 0 ] ; then 
+	/home/orschiro/Bin/rsync-backup /run/media/orschiro/2aac80d3-3f44-41dc-9f99-18f251d518dd/Backups/rsync/
+fi
+

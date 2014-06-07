@@ -1,0 +1,17 @@
+[Unit]
+Description=Starts weekly rsync backup
+Wants=timer-weekly.timer
+
+[Service]
+#User=                                          # Add a user if you wish the service to be executes as a particular user, else delete this line
+#Type=                                          # Simple by default, change it if you know what you are doing, else delete this line
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+#ExecStart=/usr/bin/bar --option1 --option2     # More than one ExecStart can be used if required
+ExecStart=/home/orschiro/Bin/rsync-backup
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/orschiro/.Xauthority
+
+[Install]
+WantedBy=timer-weekly.target
