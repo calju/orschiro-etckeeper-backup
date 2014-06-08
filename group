@@ -35,10 +35,10 @@ users:x:100:
 systemd-journal:x:190:
 systemd-journal-gateway:x:191:
 systemd-timesync:x:192:
+systemd-network:x:193:
 vboxusers:x:108:orschiro
 git:x:997:
 polkitd:x:102:
 rtkit:x:133:
 avahi:x:84:
 colord:x:124:
-systemd-network:x:193:
