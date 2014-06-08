@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <gconf>
 	<dir name="apps">
+		<dir name="awn-applet-taskmanager">
+		</dir>
+		<dir name="awn-applet-simple-launcher">
+		</dir>
+		<dir name="avant-window-navigator">
+			<dir name="effects">
+			</dir>
+			<dir name="shared">
+			</dir>
+			<dir name="theme">
+			</dir>
+			<dir name="panel">
+			</dir>
+			<dir name="panels">
+			</dir>
+		</dir>
 		<dir name="gksu">
 			<entry name="save-keyring" mtime="1401262231" schema="/schemas/apps/gksu/save-keyring"/>
 			<entry name="save-to-keyring" mtime="1401262231" schema="/schemas/apps/gksu/save-to-keyring"/>
@@ -106,8 +122,24 @@
 	</dir>
 	<dir name="schemas">
 		<dir name="apps">
+			<dir name="awn-applet-taskmanager">
+			</dir>
+			<dir name="awn-applet-simple-launcher">
+			</dir>
+			<dir name="avant-window-navigator">
+				<dir name="effects">
+				</dir>
+				<dir name="shared">
+				</dir>
+				<dir name="theme">
+				</dir>
+				<dir name="panel">
+				</dir>
+				<dir name="panels">
+				</dir>
+			</dir>
 			<dir name="gksu">
-				<entry name="save-keyring" mtime="1401262231" type="schema" stype="string" owner="gksu" gettext_domain="libgksu">
+				<entry name="save-keyring" mtime="1401262231" type="schema" stype="string" owner="gksu">
 					<local_schema locale="C" short_desc="Keyring to which passwords will be saved">
 						<default type="string">
 							<stringvalue>session</stringvalue>
@@ -119,7 +151,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="save-to-keyring" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="save-to-keyring" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Save password to gnome-keyring">
 						<default type="bool" value="true"/>
 						<longdesc>
@@ -128,7 +160,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="display-no-pass-info" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="display-no-pass-info" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Display information message when no password is needed">
 						<default type="bool" value="true"/>
 						<longdesc>
@@ -138,7 +170,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="prompt" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="prompt" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Prompt for grabbing">
 						<default type="bool" value="false"/>
 						<longdesc>
@@ -148,7 +180,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="sudo-mode" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="sudo-mode" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Sudo mode">
 						<default type="bool" value="false"/>
 						<longdesc>
@@ -158,7 +190,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="force-grab" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="force-grab" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Force keyboard and mouse grab">
 						<default type="bool" value="false"/>
 						<longdesc>
@@ -167,7 +199,7 @@
 	</longdesc>
 					</local_schema>
 				</entry>
-				<entry name="disable-grab" mtime="1401262231" type="schema" stype="bool" owner="gksu" gettext_domain="libgksu">
+				<entry name="disable-grab" mtime="1401262231" type="schema" stype="bool" owner="gksu">
 					<local_schema locale="C" short_desc="Disable keyboard and mouse grab">
 						<default type="bool" value="false"/>
 						<longdesc>
