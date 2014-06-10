@@ -2,7 +2,6 @@
 Description=Weekly Timer
 
 [Timer]
-OnBootSec=15min
 OnCalendar=weekly
 Persistent=true
 Unit=timer-weekly.target
