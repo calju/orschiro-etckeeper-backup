@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=Huiswerk
+IP=dhcp
+Key=\"b31175e0b2d170d3059ab13f943520f87cfb2c253b9c9220e17168736b59273b
