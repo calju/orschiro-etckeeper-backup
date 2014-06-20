@@ -1,3 +1,0 @@
-# Start arandr on monitor/beamer plug in 
-# https://bbs.archlinux.org/viewtopic.php?id=170294
-KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/orschiro/.Xauthority", RUN+="/usr/bin/arandr"
