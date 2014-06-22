@@ -32,7 +32,7 @@
 ### Automatically restore the volume of streams and devices
 # https://bbs.archlinux.org/viewtopic.php?pid=1408627#p1408627
 # comment out the following line if speaker is reset to 0
-#load-module module-device-restore
+load-module module-device-restore
 load-module module-stream-restore
 load-module module-card-restore
 
