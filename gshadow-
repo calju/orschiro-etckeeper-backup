@@ -24,7 +24,7 @@ uuidd:x::
 dbus:x::
 network:x::orschiro
 video:x::orschiro
-audio:::orschiro
+audio:::
 optical:::
 floppy:x::
 storage:x::orschiro
@@ -41,3 +41,4 @@ avahi:x::
 colord:!::
 systemd-journal-gateway:!::
 systemd-timesync:!::
+systemd-network:!::

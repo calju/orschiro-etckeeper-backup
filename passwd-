@@ -16,4 +16,3 @@ orschiro:x:1000:100:Robert Orzanna:/home/orschiro:/usr/bin/zsh
 git:x:999:997:git daemon user:/:/bin/bash
 rtkit:x:133:133:RealtimeKit:/proc:/sbin/nologin
 colord:x:124:124::/var/lib/colord:/bin/false
-lightdm:x:620:620:Light Display Manager:/var/lib/lightdm:/sbin/nologin
