@@ -17,3 +17,4 @@ systemd-journal-gateway:!:16225:0:99999:7:::
 systemd-timesync:!:16225:0:99999:7:::
 systemd-network:!:16229:0:99999:7:::
 lightdm:!:16243:0:99999:7:::
+systemd-bus-proxy:!:16244:0:99999:7:::

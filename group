@@ -43,3 +43,5 @@ rtkit:x:133:
 avahi:x:84:
 colord:x:124:
 lightdm:x:620:
+systemd-bus-proxy:x:194:
+systemd-resolve:x:195:

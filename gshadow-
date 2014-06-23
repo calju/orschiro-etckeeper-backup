@@ -42,3 +42,6 @@ colord:!::
 systemd-journal-gateway:!::
 systemd-timesync:!::
 systemd-network:!::
+lightdm:!::
+systemd-bus-proxy:!::
+systemd-resolve:!::
