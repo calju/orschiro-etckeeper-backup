@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=Tele2WJtKng
+IP=dhcp
+Key=\"5d6478db95afca4fd673f32366e1b8eee318b7733b706968865a92491401eb93
