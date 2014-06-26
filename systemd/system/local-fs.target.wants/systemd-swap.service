@@ -1,1 +1,1 @@
-/etc/systemd/system/systemd-swap.service
+/usr/lib/systemd/system/systemd-swap.service
