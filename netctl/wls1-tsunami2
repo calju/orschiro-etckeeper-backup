@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wep
+ESSID=tsunami2
+IP=dhcp
+Key=\"12345678901234567890123456

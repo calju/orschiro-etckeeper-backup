@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=none
+ESSID=Studio76\ Free\ WiFi\ 2.4G
+IP=dhcp
+
