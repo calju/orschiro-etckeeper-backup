@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=o2-WLAN30
+IP=dhcp
+Key=\"75184cbc8535222dfc2d5488a461aa99d8b35706723091b08b6fb53103c8ce37
