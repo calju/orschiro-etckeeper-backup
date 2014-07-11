@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=FRITZ\!Box\ Fon\ WLAN\ 7112
+IP=dhcp
+Key=\"247d1d509b7b8e48de167fe7ceda02f102210410a8bb6eabaa672746d761ae41

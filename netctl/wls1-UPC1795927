@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=UPC1795927
+IP=dhcp
+Key=\"8d15f09da4628b4f83cfee9f69c876fde9600f95c2c5fb197d31da967e3fb12a
