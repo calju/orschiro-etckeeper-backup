@@ -56,3 +56,12 @@ export INFINALITY_FT_GLOBAL_EMBOLDEN_X_VALUE="0"
 export INFINALITY_FT_GLOBAL_EMBOLDEN_Y_VALUE="0"
 export INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE="0"
 export INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE="0"
+
+# Custom values by brebs
+# https://bbs.archlinux.org/viewtopic.php?pid=1436656#p1436656
+
+# Makes fonts darker and thicker
+export INFINALITY_FT_BRIGHTNESS="-10"
+
+# Not too sharp, not too smooth
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
