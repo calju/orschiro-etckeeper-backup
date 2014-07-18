@@ -1,7 +1,8 @@
-# /etc/mail.rc
-# Configuration file for Mail(1)
+# /etc/mail.rc - configuration file for Mail(1)
+# S-nail(1): v14.7.4 / 2014-07-15
 
 ## The standard POSIX 2008/Cor 1-2013 mandates the following initial settings:
+# (Keep in sync: ./main.c:_startup(), ./nail.rc, ./nail.1:"Initial settings"!)
 # [a]   noallnet, noappend, asksub, noaskbcc, noaskcc, noautoprint,
 # [b-e] nobang, nocmd, nocrt, nodebug, nodot, escape="~",
 # [f-i] noflipr, nofolder, header, nohold, noignore, noignoreeof,
@@ -11,7 +12,8 @@
 # [t-z] toplines="5"
 # Notes:
 # - *noonehop* doesn't exist in this implementation.
-#   To pass through options to the MTA, use the `-O' command line option
+#   (To pass options through to an MTA, either add them after a '--' separator
+#   on the command line or by setting the *sendmail-arguments* variable.)
 # - *prompt* is "\\& " by default, which will act POSIX-compliant
 #   unless the user would set *bsdcompat*
 
@@ -61,7 +63,7 @@ set emptybox
 # Startup into interactive mode even if the (given) mailbox is empty
 #set emptystart
 
-# [OPTION] Add more entries to the history as is done by default
+# [OPTION] Add more entries to the history as is done by default
 set history-gabby
 
 # Do not forward to mbox by default since this is likely to be
@@ -156,3 +158,4 @@ set pipe-image/svg+xml=@
 # Other pipe-CONTENT/SUBCONTENT entries
 #set pipe-text/html="lynx -stdin -dump -force_html"
 
+# s-it-mode
