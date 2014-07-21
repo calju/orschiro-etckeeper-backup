@@ -1,3 +1,4 @@
+sleep 60
 # Determining if on AC or battery
 if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1
 then
