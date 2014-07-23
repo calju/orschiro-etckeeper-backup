@@ -3,3 +3,7 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+
+# "Couldn't register with accessibility bus: Did not receive a reply."
+# https://bbs.archlinux.org/viewtopic.php?pid=1438842#p1438842
+export NO_AT_BRIDGE=1
