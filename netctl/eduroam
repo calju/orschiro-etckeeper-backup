@@ -13,5 +13,5 @@ WPAConfigSection=(
     'anonymous_identity="anonymous@soliscom.uu.nl"' # ex: tu-dresden.de
     'identity="4127919@soliscom.uu.nl"' # ex: s4234381@tu-dresden.de
     'ca_cert="/usr/share/ca-certificates/mozilla/Deutsche_Telekom_Root_CA_2.crt"'
-    'password="!DYXgcu1"'
+    'password=hash:7bd088bf708fcc1d0a1ab08b63f72c12'
 )
