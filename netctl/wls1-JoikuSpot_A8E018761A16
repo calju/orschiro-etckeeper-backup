@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=none
+ESSID=JoikuSpot_A8E018761A16
+IP=dhcp
+

@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=Dieter\ s\ iPhone
+IP=dhcp
+Key=\"427f254a41bf045b125b79449e147d2ac8335ed48a7dd752cd0412c39c90771a
