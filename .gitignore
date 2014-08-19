@@ -42,6 +42,7 @@ openvpn/openvpn-status.log
 cups/subscriptions.conf
 cups/subscriptions.conf.O
 fake-hwclock.data
+check_mk/logwatch.state
 
 # editor temp files
 *~
