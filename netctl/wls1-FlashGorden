@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wls1
+Connection=wireless
+Security=wpa
+ESSID=FlashGorden
+IP=dhcp
+Key=\"fe1142bb2a78991089cb893c6c9d07d85b8b226512bd0d8af71ba4112c5ed2de
